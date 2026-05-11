@@ -1,0 +1,1632 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=yes" />
+<title>La Porta del Ghetto · Guest Guide</title>
+<meta name="description" content="Guida completa per gli ospiti dell'appartamento La Porta del Ghetto, nel cuore storico di Bologna." />
+<meta name="theme-color" content="#8B2A1F" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --terracotta: #8B2A1F;
+    --terracotta-dark: #6B1F18;
+    --ochre: #C2811E;
+    --cream: #F5EDE0;
+    --cream-dark: #ECE0CB;
+    --paper: #FAF6EE;
+    --ink: #2A1810;
+    --ink-soft: #5C4530;
+    --line: #D4C5AB;
+    --shadow: rgba(42, 24, 16, 0.08);
+    --shadow-strong: rgba(42, 24, 16, 0.18);
+  }
+
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased;-webkit-text-size-adjust:100%}
+  body{
+    font-family:'Inter',sans-serif;
+    background:var(--paper);
+    color:var(--ink);
+    line-height:1.65;
+    overflow-x:hidden;
+  }
+
+  .mono{font-family:'DM Mono',monospace;letter-spacing:.02em}
+  .eyebrow{
+    font-family:'DM Mono',monospace;
+    font-size:.72rem;
+    text-transform:uppercase;
+    letter-spacing:.22em;
+    color:var(--terracotta);
+    font-weight:500;
+  }
+
+  /* LANGUAGE SWITCHER — fixed top right */
+  .lang-switch{
+    position:fixed;top:16px;right:16px;z-index:100;
+    background:rgba(42,24,16,.7);
+    backdrop-filter:blur(10px);
+    -webkit-backdrop-filter:blur(10px);
+    border:1px solid rgba(245,237,224,.2);
+    border-radius:100px;padding:4px;
+    display:flex;gap:2px;
+    box-shadow:0 4px 14px rgba(0,0,0,.2);
+  }
+  .lang-switch button{
+    background:transparent;color:var(--cream);
+    border:0;cursor:pointer;
+    font-family:'DM Mono',monospace;
+    font-size:.7rem;letter-spacing:.12em;font-weight:500;
+    padding:8px 12px;border-radius:100px;
+    transition:all .25s;text-transform:uppercase;
+    min-width:36px;
+  }
+  .lang-switch button.active{
+    background:var(--ochre);color:var(--ink);
+  }
+  .lang-switch button:not(.active):hover{background:rgba(245,237,224,.1)}
+
+  /* HERO */
+  .hero{
+    position:relative;
+    min-height:100vh;
+    min-height:100svh;
+    background:
+      linear-gradient(180deg, rgba(42,24,16,.15) 0%, rgba(42,24,16,.55) 60%, rgba(42,24,16,.85) 100%),
+      url('https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTQwMDY3NDU5MDMwNDU2MDExNw==/original/234f6541-dfcf-4f18-9fe6-6c8883dd2c53.jpeg?im_w=1440') center/cover no-repeat;
+    color:var(--cream);
+    display:flex;flex-direction:column;justify-content:space-between;
+    padding:80px 24px 32px;
+  }
+  .hero-top{
+    display:flex;justify-content:space-between;align-items:center;
+    font-family:'DM Mono',monospace;
+    font-size:.7rem;letter-spacing:.25em;text-transform:uppercase;
+    opacity:.85;
+  }
+  .hero-top .seal{
+    width:42px;height:42px;border:1px solid var(--cream);
+    border-radius:50%;display:grid;place-items:center;
+    font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.25rem;
+  }
+  .hero-content{max-width:900px}
+  .hero-eyebrow{
+    font-family:'DM Mono',monospace;font-size:.72rem;
+    letter-spacing:.28em;text-transform:uppercase;
+    color:var(--ochre);margin-bottom:18px;
+    display:flex;align-items:center;gap:12px;
+  }
+  .hero-eyebrow::before{content:"";width:30px;height:1px;background:var(--ochre)}
+  .hero h1{
+    font-family:'Cormorant Garamond',serif;
+    font-size:clamp(2.8rem, 13vw, 7rem);
+    font-weight:400;line-height:.95;
+    letter-spacing:-.02em;
+  }
+  .hero h1 em{
+    font-style:italic;color:var(--ochre);font-weight:300;
+    display:block;margin-top:.1em;
+  }
+  .hero-tagline{
+    margin-top:24px;max-width:540px;
+    font-family:'Cormorant Garamond',serif;
+    font-size:clamp(1.15rem, 4.5vw, 1.5rem);font-weight:300;font-style:italic;
+    line-height:1.45;opacity:.95;
+  }
+  .hero-meta{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+    margin-top:36px;padding-top:24px;
+    border-top:1px solid rgba(245,237,224,.25);
+  }
+  .hero-meta strong{
+    display:block;
+    font-family:'Cormorant Garamond',serif;
+    font-size:1.6rem;font-weight:500;
+    line-height:1;margin-bottom:4px;
+  }
+  .hero-meta span{
+    font-family:'DM Mono',monospace;
+    font-size:.62rem;letter-spacing:.16em;
+    text-transform:uppercase;opacity:.75;
+  }
+
+  /* QUICK NAV */
+  .quicknav{
+    position:sticky;top:0;z-index:50;
+    background:rgba(250,246,238,.96);
+    backdrop-filter:blur(10px);
+    -webkit-backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line);
+    padding:14px 20px;
+    display:flex;gap:22px;overflow-x:auto;
+    font-family:'DM Mono',monospace;
+    font-size:.7rem;letter-spacing:.15em;text-transform:uppercase;
+    scrollbar-width:none;
+    -webkit-overflow-scrolling:touch;
+  }
+  .quicknav::-webkit-scrollbar{display:none}
+  .quicknav a{
+    color:var(--ink-soft);text-decoration:none;
+    white-space:nowrap;padding:4px 0;
+    border-bottom:1px solid transparent;
+    transition:all .25s;
+  }
+  .quicknav a:hover{color:var(--terracotta);border-color:var(--terracotta)}
+
+  /* SECTION */
+  section.block{padding:64px 20px}
+  .block-inner{max-width:1200px;margin:0 auto}
+  .section-head{
+    margin-bottom:36px;padding-bottom:18px;
+    border-bottom:1px solid var(--line);
+  }
+  .section-num{
+    font-family:'Cormorant Garamond',serif;
+    font-style:italic;font-size:3.4rem;font-weight:300;
+    color:var(--terracotta);line-height:1;
+    opacity:.85;display:block;margin-bottom:8px;
+  }
+  .section-head h2{
+    font-family:'Cormorant Garamond',serif;
+    font-size:clamp(1.9rem, 7vw, 3.6rem);
+    font-weight:500;line-height:1.05;
+    letter-spacing:-.015em;
+    margin-top:6px;
+  }
+  .section-head .eyebrow{display:block}
+
+  /* HOUSE GALLERY */
+  .house-gallery{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    grid-template-rows:repeat(3, 180px);
+    gap:10px;margin-bottom:24px;
+  }
+  .house-gallery .img{
+    background-size:cover;background-position:center;
+    border-radius:2px;position:relative;overflow:hidden;
+  }
+  .house-gallery .img:nth-child(1){grid-column:span 2;grid-row:span 1;height:240px}
+  .house-gallery .img::after{
+    content:attr(data-label);
+    position:absolute;left:10px;bottom:10px;
+    color:var(--cream);font-family:'DM Mono',monospace;
+    font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;
+    background:rgba(42,24,16,.6);padding:4px 9px;border-radius:2px;
+    backdrop-filter:blur(4px);
+  }
+
+  /* WELCOME */
+  .welcome-grid{
+    display:flex;flex-direction:column;gap:32px;
+  }
+  .welcome-text{font-size:1rem;color:var(--ink-soft)}
+  .welcome-text p{margin-bottom:16px}
+  .welcome-text p.lead{
+    font-family:'Cormorant Garamond',serif;
+    font-size:clamp(1.2rem, 4.8vw, 1.55rem);line-height:1.45;font-weight:400;
+    color:var(--ink);font-style:italic;
+    margin-bottom:24px;
+  }
+  .welcome-text p.lead::first-letter{
+    font-size:3rem;float:left;line-height:.85;
+    padding:6px 8px 0 0;color:var(--terracotta);
+    font-style:normal;font-weight:500;
+  }
+  .signature{
+    margin-top:24px;font-family:'Cormorant Garamond',serif;
+    font-style:italic;font-size:1.3rem;
+  }
+  .signature span{display:block;font-family:'DM Mono',monospace;
+    font-size:.66rem;letter-spacing:.18em;text-transform:uppercase;
+    font-style:normal;color:var(--ink-soft);margin-top:4px}
+
+  .info-card{
+    background:var(--cream);
+    padding:28px 24px;border-radius:2px;
+    border-top:3px solid var(--terracotta);
+    box-shadow:0 1px 0 var(--line);
+  }
+  .info-card h3{
+    font-family:'Cormorant Garamond',serif;
+    font-size:1.4rem;margin-bottom:18px;font-weight:500;
+  }
+  .info-row{
+    display:flex;justify-content:space-between;align-items:baseline;
+    padding:12px 0;border-bottom:1px dashed var(--line);
+    gap:14px;
+  }
+  .info-row:last-child{border-bottom:0}
+  .info-row .label{
+    font-family:'DM Mono',monospace;
+    font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--ink-soft);
+    flex-shrink:0;
+  }
+  .info-row .value{
+    font-weight:500;text-align:right;color:var(--ink);
+    font-size:.95rem;
+  }
+
+  /* WIFI BLOCK */
+  .wifi-card{
+    background:linear-gradient(135deg, var(--terracotta) 0%, var(--terracotta-dark) 100%);
+    color:var(--cream);padding:32px 24px;border-radius:2px;
+    margin-top:24px;position:relative;overflow:hidden;
+  }
+  .wifi-card::before{
+    content:"";position:absolute;top:-40px;right:-40px;
+    width:160px;height:160px;
+    background:radial-gradient(circle, rgba(245,237,224,.1) 0%, transparent 70%);
+  }
+  .wifi-card .eyebrow{color:var(--ochre);margin-bottom:12px}
+  .wifi-card h3{
+    font-family:'Cormorant Garamond',serif;
+    font-size:clamp(1.5rem, 5.5vw, 2rem);
+    margin-bottom:20px;font-weight:500;
+  }
+  .wifi-detail{
+    display:flex;justify-content:space-between;
+    padding:12px 0;border-bottom:1px solid rgba(245,237,224,.2);
+    gap:12px;flex-wrap:wrap;
+  }
+  .wifi-detail:last-child{border-bottom:0}
+  .wifi-detail .lab{
+    font-family:'DM Mono',monospace;font-size:.66rem;
+    letter-spacing:.16em;text-transform:uppercase;opacity:.7;
+    flex-shrink:0;
+  }
+  .wifi-detail .val{
+    font-family:'DM Mono',monospace;font-size:.95rem;font-weight:500;
+    word-break:break-all;text-align:right;
+  }
+
+  /* INSTRUCTIONS */
+  .instructions{
+    display:grid;
+    grid-template-columns:1fr;gap:18px;margin-top:32px;
+  }
+  .ins-card{
+    background:var(--paper);border:1px solid var(--line);
+    padding:24px 22px;border-radius:2px;
+  }
+  .ins-card .num{
+    font-family:'Cormorant Garamond',serif;
+    font-size:2.2rem;color:var(--terracotta);font-style:italic;
+    font-weight:400;line-height:1;
+  }
+  .ins-card h4{
+    font-family:'Cormorant Garamond',serif;
+    font-size:1.3rem;margin:10px 0 10px;font-weight:500;
+  }
+  .ins-card p{color:var(--ink-soft);font-size:.94rem}
+  .ins-card ul{list-style:none;margin-top:12px;padding:0}
+  .ins-card li{
+    padding:7px 0 7px 20px;position:relative;
+    font-size:.92rem;color:var(--ink-soft);
+    border-bottom:1px dashed var(--line);
+    line-height:1.5;
+  }
+  .ins-card li:last-child{border:0}
+  .ins-card li::before{
+    content:"●";position:absolute;left:0;top:8px;
+    color:var(--terracotta);font-size:.55rem;
+  }
+
+  /* PLACE LIST */
+  .intro-text{
+    font-family:'Cormorant Garamond',serif;
+    font-size:clamp(1.1rem, 4.5vw, 1.4rem);font-style:italic;
+    color:var(--ink-soft);max-width:680px;margin-bottom:36px;line-height:1.5;
+  }
+  .place-list{display:flex;flex-direction:column;gap:16px}
+  .place-card{
+    background:var(--paper);
+    border:1px solid var(--line);
+    border-left:4px solid var(--terracotta);
+    padding:24px 22px;border-radius:0 2px 2px 0;
+    display:grid;
+    grid-template-columns:auto 1fr;
+    gap:16px;
+    transition:transform .3s, box-shadow .3s, border-color .3s;
+  }
+  .place-card:hover, .place-card:active{
+    transform:translateX(3px);
+    box-shadow:0 8px 20px var(--shadow);
+    border-left-color:var(--ochre);
+  }
+  .place-num{
+    font-family:'Cormorant Garamond',serif;
+    font-size:2.4rem;font-style:italic;font-weight:300;
+    line-height:.9;color:var(--terracotta);
+    min-width:60px;
+  }
+  .place-info h4{
+    font-family:'Cormorant Garamond',serif;
+    font-size:clamp(1.4rem, 5.2vw, 1.85rem);
+    font-weight:500;line-height:1.1;
+    margin-bottom:6px;
+  }
+  .place-info .place-meta{
+    font-family:'DM Mono',monospace;
+    font-size:.64rem;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--ink-soft);margin-bottom:12px;
+    display:flex;gap:8px;flex-wrap:wrap;
+    line-height:1.6;
+  }
+  .place-info .place-meta span:not(:last-child)::after{
+    content:"·";margin-left:8px;color:var(--terracotta);
+  }
+  .place-info p{
+    font-size:.95rem;color:var(--ink-soft);
+    line-height:1.6;
+  }
+  .place-info .place-tip{
+    margin-top:12px;
+    font-family:'Cormorant Garamond',serif;
+    font-size:1rem;font-style:italic;color:var(--terracotta-dark);
+    padding-left:14px;border-left:2px solid var(--ochre);
+    line-height:1.5;
+  }
+  .place-action{
+    grid-column:1/-1;
+    display:flex;justify-content:space-between;align-items:center;
+    padding-top:16px;margin-top:6px;
+    border-top:1px dashed var(--line);
+    gap:12px;
+  }
+  .place-rating{
+    font-family:'Cormorant Garamond',serif;
+    font-size:1.9rem;font-weight:500;line-height:1;
+    color:var(--ink);
+  }
+  .place-rating::after{
+    content:"★";font-size:.8rem;color:var(--ochre);
+    margin-left:3px;vertical-align:super;
+  }
+  .place-link{
+    font-family:'DM Mono',monospace;
+    font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--terracotta);text-decoration:none;
+    padding:10px 16px;border:1px solid var(--terracotta);
+    transition:all .25s;white-space:nowrap;
+    border-radius:2px;
+    display:inline-block;
+    -webkit-tap-highlight-color:transparent;
+  }
+  .place-link:hover, .place-link:active{background:var(--terracotta);color:var(--cream)}
+
+  /* TRADITION CALL-OUT */
+  .tradition-box{
+    margin-top:40px;
+    background:var(--ink);color:var(--cream);
+    padding:36px 24px;border-radius:2px;
+    position:relative;overflow:hidden;
+  }
+  .tradition-box::before{
+    content:"";position:absolute;top:-60px;left:-60px;
+    width:200px;height:200px;
+    background:radial-gradient(circle, var(--ochre) 0%, transparent 70%);
+    opacity:.25;
+  }
+  .tradition-box .eyebrow{color:var(--ochre)}
+  .tradition-box h3{
+    font-family:'Cormorant Garamond',serif;
+    font-size:clamp(1.6rem, 6vw, 2.4rem);font-weight:500;margin:12px 0 24px;
+    line-height:1.1;
+  }
+  .tradition-box h3 em{color:var(--ochre);font-style:italic}
+  .tradition-grid{
+    display:grid;grid-template-columns:1fr;
+    gap:14px;
+  }
+  .tradition-grid div{
+    padding:12px 0;border-bottom:1px dashed rgba(245,237,224,.2);
+  }
+  .tradition-grid strong{
+    display:block;
+    font-family:'Cormorant Garamond',serif;font-size:1.2rem;
+    font-weight:500;color:var(--ochre);margin-bottom:2px;
+  }
+  .tradition-grid span{font-size:.92rem;opacity:.85;line-height:1.5}
+
+  /* PRACTICAL */
+  .practical-grid{
+    display:grid;grid-template-columns:1fr;gap:18px;
+  }
+  .prac-card{
+    background:var(--cream);border-left:3px solid var(--terracotta);
+    padding:24px 22px;border-radius:0 2px 2px 0;
+  }
+  .prac-card .icon{
+    font-family:'Cormorant Garamond',serif;
+    font-size:2rem;font-style:italic;color:var(--terracotta);
+    line-height:1;display:block;margin-bottom:10px;
+  }
+  .prac-card h4{
+    font-family:'Cormorant Garamond',serif;
+    font-size:1.3rem;font-weight:500;margin-bottom:10px;
+  }
+  .prac-card p, .prac-card li{
+    font-size:.92rem;color:var(--ink-soft);line-height:1.55;
+  }
+  .prac-card ul{list-style:none;margin-top:8px}
+  .prac-card li{
+    padding:7px 0;border-bottom:1px dashed var(--line);
+    display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;
+  }
+  .prac-card li:last-child{border:0}
+  .prac-card li strong{color:var(--ink);font-weight:500;text-align:right}
+
+  /* EMERGENCY */
+  .emergency{
+    background:linear-gradient(135deg, var(--terracotta-dark) 0%, var(--ink) 100%);
+    color:var(--cream);padding:60px 20px;
+  }
+  .emergency-inner{max-width:1200px;margin:0 auto}
+  .emergency h2{
+    font-family:'Cormorant Garamond',serif;
+    font-size:clamp(1.7rem,6vw,3rem);font-weight:500;
+    margin-bottom:12px;line-height:1.1;
+  }
+  .emergency .lead{
+    opacity:.8;max-width:520px;margin-bottom:36px;
+    font-size:.95rem;line-height:1.55;
+  }
+  .emergency-grid{
+    display:grid;grid-template-columns:1fr 1fr;gap:14px;
+  }
+  .em-card{
+    background:rgba(245,237,224,.06);
+    border:1px solid rgba(245,237,224,.15);
+    padding:22px 18px;backdrop-filter:blur(4px);
+  }
+  .em-card .num{
+    font-family:'Cormorant Garamond',serif;
+    font-size:1.9rem;font-weight:400;color:var(--ochre);
+    line-height:1;display:block;margin-bottom:8px;letter-spacing:.04em;
+    word-break:break-word;
+  }
+  .em-card .lab{
+    font-family:'DM Mono',monospace;font-size:.62rem;
+    letter-spacing:.14em;text-transform:uppercase;opacity:.8;
+  }
+  .em-card .desc{font-size:.78rem;margin-top:6px;opacity:.7;line-height:1.45}
+
+  /* HOST */
+  .host-block{
+    background:var(--cream);padding:60px 24px;
+  }
+  .host-inner{
+    max-width:1000px;margin:0 auto;
+    text-align:center;
+  }
+  .host-photo{
+    width:160px;height:160px;border-radius:50%;
+    margin:0 auto 24px;
+    background:url('https://a0.muscache.com/im/pictures/user/be64034b-61ba-4afc-b879-1f433a5ecd00.jpg?im_w=720') center/cover;
+    border:5px solid var(--paper);
+    box-shadow:0 14px 32px var(--shadow-strong);
+  }
+  .host-info .eyebrow{margin-bottom:10px;display:block}
+  .host-info h3{
+    font-family:'Cormorant Garamond',serif;
+    font-size:clamp(1.7rem, 6vw, 2.4rem);
+    font-weight:500;margin-bottom:6px;
+  }
+  .host-info .role{
+    font-family:'Cormorant Garamond',serif;font-style:italic;
+    color:var(--terracotta);font-size:1.1rem;margin-bottom:18px;
+  }
+  .host-info p{
+    color:var(--ink-soft);font-size:.98rem;
+    margin-bottom:20px;line-height:1.6;
+    max-width:520px;margin-left:auto;margin-right:auto;
+  }
+  .host-contact{
+    display:flex;gap:20px 28px;flex-wrap:wrap;justify-content:center;
+    padding-top:20px;border-top:1px solid var(--line);
+    max-width:600px;margin:0 auto;
+  }
+  .host-contact > div{flex:1;min-width:140px}
+  .host-contact .l{
+    font-family:'DM Mono',monospace;font-size:.62rem;
+    letter-spacing:.16em;text-transform:uppercase;
+    color:var(--ink-soft);display:block;margin-bottom:4px;
+  }
+  .host-contact .v{font-weight:500;font-size:.92rem}
+
+  /* FOOTER */
+  footer{
+    background:var(--ink);color:var(--cream);
+    padding:40px 24px 28px;text-align:center;
+  }
+  footer .seal{
+    width:54px;height:54px;border:1px solid var(--cream);
+    border-radius:50%;margin:0 auto 18px;
+    display:grid;place-items:center;
+    font-family:'Cormorant Garamond',serif;
+    font-style:italic;font-size:1.4rem;
+  }
+  footer .name{
+    font-family:'Cormorant Garamond',serif;
+    font-size:1.4rem;margin-bottom:6px;font-weight:500;
+  }
+  footer .name em{color:var(--ochre);font-style:italic;font-weight:300}
+  footer .addr{
+    font-family:'DM Mono',monospace;font-size:.7rem;
+    letter-spacing:.16em;text-transform:uppercase;opacity:.65;
+  }
+  footer .copy{
+    margin-top:24px;padding-top:20px;
+    border-top:1px solid rgba(245,237,224,.15);
+    font-family:'DM Mono',monospace;font-size:.66rem;
+    letter-spacing:.14em;text-transform:uppercase;opacity:.5;
+  }
+
+  /* TABLET (≥720px) */
+  @media (min-width: 720px){
+    section.block{padding:80px 40px}
+    .emergency, .host-block{padding:80px 40px}
+    .hero{padding:32px 40px 40px}
+    .quicknav{padding:14px 40px;gap:26px}
+    .section-head{
+      display:grid;grid-template-columns:auto 1fr;gap:32px;align-items:end;
+      padding-bottom:22px;margin-bottom:48px;
+    }
+    .section-num{font-size:4.4rem;margin:0}
+    .welcome-grid{
+      display:grid;grid-template-columns:1.2fr 1fr;gap:48px;align-items:start;
+    }
+    .info-card{padding:34px 30px}
+    .wifi-card{padding:40px 36px}
+    .instructions{grid-template-columns:1fr 1fr;gap:24px}
+    .ins-card{padding:28px}
+    .practical-grid{grid-template-columns:1fr 1fr;gap:22px}
+    .prac-card{padding:28px}
+    .place-card{
+      grid-template-columns:auto 1fr auto;
+      padding:30px 32px;gap:26px;
+      align-items:start;
+    }
+    .place-card .place-action{
+      grid-column:auto;flex-direction:column;align-items:flex-end;
+      padding-top:0;margin-top:0;border-top:0;gap:10px;
+    }
+    .place-num{font-size:3.4rem;min-width:80px}
+    .tradition-box{padding:48px 40px}
+    .tradition-grid{grid-template-columns:1fr 1fr;gap:14px 32px}
+    .emergency-grid{grid-template-columns:repeat(4,1fr);gap:18px}
+    .em-card{padding:26px}
+    .em-card .num{font-size:2.4rem}
+    .host-inner{
+      display:grid;grid-template-columns:auto 1fr;gap:48px;align-items:center;
+      text-align:left;
+    }
+    .host-photo{width:200px;height:200px;margin:0}
+    .host-info p{margin-left:0;margin-right:0}
+    .host-contact{justify-content:flex-start}
+    .house-gallery{
+      grid-template-columns:2fr 1fr 1fr;
+      grid-template-rows:240px 240px;
+    }
+    .house-gallery .img:nth-child(1){grid-column:span 1;grid-row:span 2;height:auto}
+    .hero-meta{grid-template-columns:repeat(5,auto);gap:36px}
+    .hero-meta strong{font-size:1.85rem}
+  }
+
+  /* DESKTOP (≥1024px) */
+  @media (min-width: 1024px){
+    section.block{padding:100px 6vw}
+    .hero{padding:32px 6vw 48px}
+    .quicknav{padding:14px 6vw;gap:28px}
+    .emergency, .host-block{padding:80px 6vw}
+    footer{padding:50px 6vw 30px}
+    .lang-switch{top:24px;right:24px}
+  }
+
+  @keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+  .reveal{animation:fadeUp .8s ease both}
+
+  /* Hide elements during language switch */
+  [data-i18n]{transition:opacity .2s}
+  body.switching [data-i18n]{opacity:.4}
+</style>
+</head>
+
+<body>
+
+<!-- LANGUAGE SWITCHER -->
+<div class="lang-switch" role="group" aria-label="Language">
+  <button data-lang="it" class="active" onclick="setLang('it')">IT</button>
+  <button data-lang="en" onclick="setLang('en')">EN</button>
+  <button data-lang="es" onclick="setLang('es')">ES</button>
+</div>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="hero-top">
+    <span data-i18n="hero.location">Bologna · Emilia-Romagna · IT</span>
+    <div class="seal">PG</div>
+  </div>
+
+  <div class="hero-content reveal">
+    <div class="hero-eyebrow" data-i18n="hero.eyebrow">Guida Ospiti · Welcome Book</div>
+    <h1 data-i18n-html="hero.title">La Porta<br/><em>del Ghetto</em></h1>
+    <p class="hero-tagline" data-i18n="hero.tagline">
+      Un appartamento di 105 m² nel cuore medievale di Bologna, a pochi passi
+      dalle Due Torri e da Piazza Maggiore.
+    </p>
+    <div class="hero-meta">
+      <div><strong>6</strong><span data-i18n="hero.guests">Ospiti</span></div>
+      <div><strong>3</strong><span data-i18n="hero.bedrooms">Camere</span></div>
+      <div><strong>1</strong><span data-i18n="hero.bath">Bagno</span></div>
+      <div><strong>105</strong><span data-i18n="hero.sqm">Metri quadri</span></div>
+      <div><strong>4.86</strong><span data-i18n="hero.rating">★ Rating</span></div>
+    </div>
+  </div>
+</header>
+
+<!-- QUICK NAV -->
+<nav class="quicknav">
+  <a href="#welcome" data-i18n="nav.welcome">Benvenuto</a>
+  <a href="#casa" data-i18n="nav.house">La Casa</a>
+  <a href="#wifi" data-i18n="nav.wifi">Wi-Fi & Istruzioni</a>
+  <a href="#cibo" data-i18n="nav.food">Dove Mangiare</a>
+  <a href="#vedere" data-i18n="nav.see">Cosa Vedere</a>
+  <a href="#pratico" data-i18n="nav.practical">Info Pratiche</a>
+  <a href="#emergenze" data-i18n="nav.emergency">Emergenze</a>
+  <a href="#host" data-i18n="nav.host">Il tuo Host</a>
+</nav>
+
+<!-- WELCOME -->
+<section class="block" id="welcome">
+  <div class="block-inner">
+    <div class="section-head">
+      <div class="section-num">I</div>
+      <div>
+        <span class="eyebrow" data-i18n="welcome.chapter">Capitolo Primo</span>
+        <h2 data-i18n="welcome.title">Benvenuti nel cuore antico di Bologna.</h2>
+      </div>
+    </div>
+
+    <div class="welcome-grid">
+      <div class="welcome-text">
+        <p class="lead" data-i18n="welcome.lead">
+          Bologna la chiamano "la Dotta, la Grassa, la Rossa". Dotta per la più antica
+          università del mondo occidentale, grassa per la sua cucina opulenta,
+          rossa per il colore caldo dei suoi tetti.
+        </p>
+        <p data-i18n="welcome.p1">
+          Vi trovate in uno degli angoli più suggestivi della città: l'antico Ghetto Ebraico,
+          un dedalo di vie strette e silenziose che hanno conservato l'atmosfera medievale.
+          Da queste finestre vedrete i tetti di Bologna; sotto, i suoi famosi portici
+          (Patrimonio UNESCO) vi accompagneranno ovunque, anche sotto la pioggia.
+        </p>
+        <p data-i18n="welcome.p2">
+          Abbiamo preparato questa guida con cura: tutto quello che vi serve per
+          vivere la casa, e una selezione personale dei nostri posti del cuore in città.
+          Mangiate, camminate, perdetevi. Bologna si racconta così.
+        </p>
+        <div class="signature">
+          <span data-i18n="welcome.sign1">Buon soggiorno,</span><br/>
+          Gilberto &amp; Elia
+          <span data-i18n="welcome.sign2">I vostri host · Superhost</span>
+        </div>
+      </div>
+
+      <aside class="info-card">
+        <h3 data-i18n="welcome.info.title">Informazioni essenziali</h3>
+        <div class="info-row"><span class="label" data-i18n="welcome.info.address">Indirizzo</span><span class="value">Via Oberdan, 17<br/>Bologna · 40126</span></div>
+        <div class="info-row"><span class="label" data-i18n="welcome.info.floor">Piano</span><span class="value" data-i18n="welcome.info.floorVal">2° piano · check-in in presenza</span></div>
+        <div class="info-row"><span class="label" data-i18n="welcome.info.checkin">Check-in</span><span class="value">17:00 — 22:00</span></div>
+        <div class="info-row"><span class="label" data-i18n="welcome.info.checkout">Check-out</span><span class="value" data-i18n="welcome.info.checkoutVal">entro le 11:00</span></div>
+        <div class="info-row"><span class="label">CIN</span><span class="value mono">IT037006C25ISGV8CM</span></div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- LA CASA: GALLERY -->
+<section class="block" id="casa" style="padding-top:0">
+  <div class="block-inner">
+    <div class="section-head">
+      <div class="section-num">II</div>
+      <div>
+        <span class="eyebrow" data-i18n="house.chapter">Capitolo Secondo</span>
+        <h2 data-i18n="house.title">La casa, in immagini.</h2>
+      </div>
+    </div>
+
+    <div class="house-gallery">
+      <div class="img" data-i18n-attr="data-label" data-label="Soggiorno"
+        style="background-image:url('https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTQwMDY3NDU5MDMwNDU2MDExNw==/original/234f6541-dfcf-4f18-9fe6-6c8883dd2c53.jpeg?im_w=1200')"></div>
+      <div class="img" data-i18n-attr="data-label" data-label="Camera 1"
+        style="background-image:url('https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTQwMDY3NDU5MDMwNDU2MDExNw==/original/b5a7d354-ccb0-480e-a6fa-59714c0d1d1c.jpeg?im_w=720')"></div>
+      <div class="img" data-i18n-attr="data-label" data-label="Camera 2"
+        style="background-image:url('https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTQwMDY3NDU5MDMwNDU2MDExNw==/original/1b4bed86-fbf5-4227-a61c-eb78635047f6.jpeg?im_w=720')"></div>
+      <div class="img" data-i18n-attr="data-label" data-label="Cucina"
+        style="background-image:url('https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTQwMDY3NDU5MDMwNDU2MDExNw==/original/3b69635a-0a5c-49bb-92e3-8ab2f29dfeb2.jpeg?im_w=720')"></div>
+      <div class="img" data-i18n-attr="data-label" data-label="Camera 3"
+        style="background-image:url('https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTQwMDY3NDU5MDMwNDU2MDExNw==/original/2e69f3e2-82f7-4f34-bc84-be2f421a1dd7.jpeg?im_w=720')"></div>
+    </div>
+
+    <p class="intro-text" style="text-align:center;margin:30px auto 0" data-i18n-html="house.quote">
+      "Quattro stanze affacciate sui tetti di Bologna,<br/>nel silenzio di un quartiere che il tempo ha protetto."
+    </p>
+  </div>
+</section>
+
+<!-- WIFI + ISTRUZIONI -->
+<section class="block" id="wifi" style="padding-top:30px;background:var(--cream-dark)">
+  <div class="block-inner">
+    <div class="section-head">
+      <div class="section-num">III</div>
+      <div>
+        <span class="eyebrow" data-i18n="wifi.chapter">Capitolo Terzo</span>
+        <h2 data-i18n="wifi.title">La casa, in pratica.</h2>
+      </div>
+    </div>
+
+    <div class="wifi-card">
+      <span class="eyebrow" data-i18n="wifi.eyebrow">Connessione Wi-Fi</span>
+      <h3 data-i18n="wifi.heading">Naviga senza pensieri</h3>
+      <div class="wifi-detail"><span class="lab" data-i18n="wifi.network">Rete (SSID)</span><span class="val">Interno 7</span></div>
+      <div class="wifi-detail"><span class="lab" data-i18n="wifi.password">Password</span><span class="val">badenagliuz</span></div>
+      <div class="wifi-detail"><span class="lab" data-i18n="wifi.speed">Velocità</span><span class="val">Fibra 100 Mbps</span></div>
+    </div>
+
+    <div class="instructions">
+      <div class="ins-card">
+        <span class="num">01</span>
+        <h4 data-i18n="ins1.title">Arrivo &amp; Check-in</h4>
+        <p data-i18n="ins1.desc">Il check-in si fa di persona: vi accoglieremo direttamente in casa per consegnarvi le chiavi e mostrarvi l'appartamento.</p>
+        <ul>
+          <li data-i18n-html="ins1.l1">Codice portone di strada: <strong>7890</strong></li>
+          <li data-i18n-html="ins1.l2">Suonate al citofono <strong>BONAGA-MARCHETTI</strong></li>
+          <li data-i18n="ins1.l3">Salite al 2° piano: vi consegniamo le chiavi lì</li>
+          <li data-i18n="ins1.l4">Documenti pronti: vi servirà la registrazione</li>
+        </ul>
+      </div>
+      <div class="ins-card">
+        <span class="num">02</span>
+        <h4 data-i18n="ins2.title">Riscaldamento &amp; Climatizzazione</h4>
+        <p data-i18n="ins2.desc">Il termostato del riscaldamento è in soggiorno, accanto alla porta del bagno. In ogni camera trovate un condizionatore con telecomando per regolare la temperatura.</p>
+        <ul>
+          <li data-i18n="ins2.l1">Temperatura consigliata: 19-21°C</li>
+          <li data-i18n="ins2.l2">Spegnete condizionatori e riscaldamento quando uscite</li>
+          <li data-i18n="ins2.l3">Le finestre si chiudono ermeticamente per il rumore</li>
+        </ul>
+      </div>
+      <div class="ins-card">
+        <span class="num">03</span>
+        <h4 data-i18n="ins3.title">Cucina</h4>
+        <p data-i18n="ins3.desc">La cucina è completamente attrezzata: piano cottura a gas con 5 fuochi e forno, microonde, macchina del caffè (capsule), lavastoviglie e tutto l'occorrente per cucinare.</p>
+        <ul>
+          <li data-i18n="ins3.l1">Caffè, tè e zucchero di benvenuto in dispensa</li>
+          <li data-i18n="ins3.l2">Lavastoviglie: pasticche sotto il lavello</li>
+          <li data-i18n="ins3.l3">Sale, olio EVO e pepe a vostra disposizione</li>
+        </ul>
+      </div>
+      <div class="ins-card">
+        <span class="num">04</span>
+        <h4 data-i18n="ins4.title">Raccolta differenziata</h4>
+        <p data-i18n="ins4.desc">Bologna è una città attenta all'ambiente. I bidoni sono sotto il lavello con etichette colorate. Il punto di conferimento è in Via Capo di Lucca, 2 min a piedi.</p>
+        <ul>
+          <li data-i18n="ins4.l1">Giallo: plastica e metalli</li>
+          <li data-i18n="ins4.l2">Blu: carta e cartone</li>
+          <li data-i18n="ins4.l3">Verde: vetro · Marrone: organico</li>
+        </ul>
+      </div>
+      <div class="ins-card">
+        <span class="num">05</span>
+        <h4 data-i18n="ins5.title">Asciugamani &amp; Lenzuola</h4>
+        <p data-i18n="ins5.desc">Trovate un set per ogni ospite nella camera assegnata. Asciugamani extra nell'armadio del bagno, lenzuola pulite nel cassetto sotto il letto matrimoniale.</p>
+        <ul>
+          <li data-i18n="ins5.l1">Cambio biancheria ogni 7 giorni</li>
+          <li data-i18n="ins5.l2">Asciugacapelli in bagno</li>
+          <li data-i18n="ins5.l3">Sapone e shampoo bio inclusi</li>
+        </ul>
+      </div>
+      <div class="ins-card">
+        <span class="num">06</span>
+        <h4 data-i18n="ins6.title">TV &amp; Intrattenimento</h4>
+        <p data-i18n="ins6.desc">In sala c'è un televisore con installati i principali canali on demand (Netflix, Prime Video, Disney+, ecc.). Potete accedere con il vostro account personale.</p>
+        <ul>
+          <li data-i18n="ins6.l1">Usate il vostro account per accedere alle app</li>
+          <li data-i18n-html="ins6.l2">Ricordate di fare il <strong>logout</strong> alla fine del soggiorno</li>
+          <li data-i18n="ins6.l3">Telecomando sul tavolino del soggiorno</li>
+        </ul>
+      </div>
+      <div class="ins-card">
+        <span class="num">07</span>
+        <h4 data-i18n="ins7.title">Check-out</h4>
+        <p data-i18n="ins7.desc">Prima di partire, vi chiediamo gentilmente di seguire questi piccoli accorgimenti.</p>
+        <ul>
+          <li data-i18n="ins7.l1">Lasciare le chiavi sul tavolo della cucina</li>
+          <li data-i18n="ins7.l2">Spegnere luci, condizionatori e riscaldamento</li>
+          <li data-i18n="ins7.l3">Logout dagli account streaming sulla TV</li>
+          <li data-i18n="ins7.l4">Portare i rifiuti nei contenitori in strada</li>
+          <li data-i18n="ins7.l5">Chiudere bene la porta sbattendola</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CIBO -->
+<section class="block" id="cibo">
+  <div class="block-inner">
+    <div class="section-head">
+      <div class="section-num">IV</div>
+      <div>
+        <span class="eyebrow" data-i18n="food.chapter">Capitolo Quarto</span>
+        <h2 data-i18n="food.title">Mangiare a Bologna.</h2>
+      </div>
+    </div>
+
+    <p class="intro-text" data-i18n="food.intro">
+      "La Grassa" si è guadagnata l'epiteto sul campo: tagliatelle al ragù,
+      tortellini in brodo, lasagne verdi, mortadella, crescentine.
+      Cliccate sul link di ogni indirizzo per vedere foto, recensioni e indicazioni su Google Maps.
+    </p>
+
+    <div class="place-list">
+
+      <article class="place-card">
+        <div class="place-num">i.</div>
+        <div class="place-info">
+          <h4>Trattoria del Tempo Buono</h4>
+          <div class="place-meta">
+            <span data-i18n="food.r1.tag">Trattoria tradizionale</span>
+            <span data-i18n="food.walk4">4 min a piedi</span>
+            <span>€€</span>
+            <span>Piazza San Martino, 4a</span>
+          </div>
+          <p data-i18n="food.r1.desc">Una delle migliori esperienze di cucina bolognese tradizionale del centro storico. Le tagliatelle al ragù qui sono un'istituzione, le guance di manzo al Lambrusco si sciolgono in bocca. Ambiente piccolo e raccolto.</p>
+          <p class="place-tip" data-i18n="food.r1.tip">Prenotare è d'obbligo. Chiuso il lunedì. Aperto fino alle 22:00.</p>
+        </div>
+        <div class="place-action">
+          <span class="place-rating">4.5</span>
+          <a class="place-link" target="_blank" rel="noopener" href="https://www.google.com/maps/place/?q=place_id:ChIJHYXSpL3Uf0cRQGw5jjQ2JY8" data-i18n="cta.maps">Vedi su Maps →</a>
+        </div>
+      </article>
+
+      <article class="place-card">
+        <div class="place-num">ii.</div>
+        <div class="place-info">
+          <h4>Ristorante Zivieri</h4>
+          <div class="place-meta">
+            <span data-i18n="food.r2.tag">Carne &amp; tradizione contemporanea</span>
+            <span data-i18n="food.walk5">5 min a piedi</span>
+            <span>€€€</span>
+            <span>Piazza della Mercanzia, 3c</span>
+          </div>
+          <p data-i18n="food.r2.desc">La macelleria-ristorante della famiglia Zivieri, storici allevatori dell'Appennino bolognese. Materie prime selezionatissime, tartare al coltello con tartufo, taglieri di salumi imperdibili. Locale elegante, dai colori caldi.</p>
+          <p class="place-tip" data-i18n="food.r2.tip">Aperto pranzo e cena, chiuso domenica. Prenotazione vivamente consigliata.</p>
+        </div>
+        <div class="place-action">
+          <span class="place-rating">4.5</span>
+          <a class="place-link" target="_blank" rel="noopener" href="https://www.google.com/maps/place/?q=place_id:ChIJi8B_LADVf0cRdgjGBoHt1dA" data-i18n="cta.maps">Vedi su Maps →</a>
+        </div>
+      </article>
+
+      <article class="place-card">
+        <div class="place-num">iii.</div>
+        <div class="place-info">
+          <h4>Trattoria dal Biassanot</h4>
+          <div class="place-meta">
+            <span data-i18n="food.r3.tag">Cucina della tradizione</span>
+            <span data-i18n="food.walk5">5 min a piedi</span>
+            <span>€€</span>
+            <span>Via Piella, 16</span>
+          </div>
+          <p data-i18n="food.r3.desc">Atmosfera calda, accanto alla famosa "finestrella" sul canale. Lasagna verde, coniglio ripieno e tortellini in brodo eccellenti. Servizio attento, ambiente classico bolognese.</p>
+          <p class="place-tip" data-i18n="food.r3.tip">Perfetto per una cena romantica. Prenotazione consigliata, chiuso domenica sera.</p>
+        </div>
+        <div class="place-action">
+          <span class="place-rating">4.4</span>
+          <a class="place-link" target="_blank" rel="noopener" href="https://www.google.com/maps/place/?q=place_id:ChIJB6NPYr3Uf0cRzMLugEVIV9M" data-i18n="cta.maps">Vedi su Maps →</a>
+        </div>
+      </article>
+
+      <article class="place-card">
+        <div class="place-num">iv.</div>
+        <div class="place-info">
+          <h4>Ristorante Ciacco</h4>
+          <div class="place-meta">
+            <span data-i18n="food.r4.tag">Pesce &amp; cucina ricercata</span>
+            <span data-i18n="food.r4.dist">Al piano terra del palazzo</span>
+            <span>€€€</span>
+            <span>Via San Simone, 1</span>
+          </div>
+          <p data-i18n="food.r4.desc">Letteralmente sotto casa: Ciacco si trova al piano terra del nostro stesso condominio. Una piccola gemma del centro storico, gestita da Stefano e Salvatore da quasi vent'anni. La specialità è il pesce — raro e prezioso a Bologna — ma la cucina di terra è altrettanto eccellente. Carta dei vini curatissima.</p>
+          <p class="place-tip" data-i18n="food.r4.tip">Prenotazione fortemente consigliata. Chiuso la domenica. Aperto pranzo e cena.</p>
+        </div>
+        <div class="place-action">
+          <span class="place-rating">4.5</span>
+          <a class="place-link" target="_blank" rel="noopener" href="https://www.google.com/maps/place/?q=place_id:ChIJ2w3UxL3Uf0cRpg_o2norRuI" data-i18n="cta.maps">Vedi su Maps →</a>
+        </div>
+      </article>
+
+      <article class="place-card">
+        <div class="place-num">v.</div>
+        <div class="place-info">
+          <h4>Caffè Terzi</h4>
+          <div class="place-meta">
+            <span data-i18n="food.r5.tag">Caffè monorigine</span>
+            <span data-i18n="food.walk3">3 min a piedi</span>
+            <span>€€</span>
+            <span>Via Oberdan, 10d</span>
+          </div>
+          <p data-i18n="food.r5.desc">Per gli amanti del caffè di qualità. Selezione di chicchi monorigine (Etiopia, Ruanda, Perù), tostatura artigianale. Niente alcolici, solo caffè e dolcetti — ma quale caffè!</p>
+          <p class="place-tip" data-i18n="food.r5.tip">Aperto 8–18 tutti i giorni. Provate il filtro etiope: raro in Italia.</p>
+        </div>
+        <div class="place-action">
+          <span class="place-rating">4.4</span>
+          <a class="place-link" target="_blank" rel="noopener" href="https://www.google.com/maps/place/?q=place_id:ChIJx5dX373Uf0cR81qvR1EG7U0" data-i18n="cta.maps">Vedi su Maps →</a>
+        </div>
+      </article>
+
+      <article class="place-card">
+        <div class="place-num">vi.</div>
+        <div class="place-info">
+          <h4>Cremeria Cavour</h4>
+          <div class="place-meta">
+            <span data-i18n="food.r6.tag">Gelateria artigianale</span>
+            <span data-i18n="food.walk6">6 min a piedi</span>
+            <span>€€</span>
+            <span>Piazza Cavour, 1d</span>
+          </div>
+          <p data-i18n="food.r6.desc">Una delle gelaterie più amate di Bologna. Pistacchio cremoso, stracciatella, cioccolato &amp; rum. Aperti anche la sera tardi, perfetti dopo cena.</p>
+          <p class="place-tip" data-i18n="food.r6.tip">Aperto fino alle 23:30, chiuso il lunedì. Provate il "Cremino Pistacchio".</p>
+        </div>
+        <div class="place-action">
+          <span class="place-rating">4.7</span>
+          <a class="place-link" target="_blank" rel="noopener" href="https://www.google.com/maps/place/?q=place_id:ChIJC0EQSoErfkcR4osmsyonkSM" data-i18n="cta.maps">Vedi su Maps →</a>
+        </div>
+      </article>
+
+      <article class="place-card">
+        <div class="place-num">vii.</div>
+        <div class="place-info">
+          <h4>Simoni Laboratorio</h4>
+          <div class="place-meta">
+            <span data-i18n="food.r7.tag">Salumeria &amp; panini</span>
+            <span data-i18n="food.walk5">5 min a piedi</span>
+            <span>€€</span>
+            <span>Via Pescherie Vecchie, 3b</span>
+          </div>
+          <p data-i18n="food.r7.desc">L'istituzione bolognese per panini con salumi e taglieri. Mortadella IGP, prosciutto di Parma, parmigiano stagionato — tutto di altissima qualità, in pieno Quadrilatero. Posti all'aperto, atmosfera vivace, ottimi i calici di Lambrusco e Pignoletto.</p>
+          <p class="place-tip" data-i18n="food.r7.tip">Aperto tutti i giorni fino alle 22 (23 venerdì e sabato). Perfetto per pranzo veloce o aperitivo.</p>
+        </div>
+        <div class="place-action">
+          <span class="place-rating">4.7</span>
+          <a class="place-link" target="_blank" rel="noopener" href="https://www.google.com/maps/place/?q=place_id:ChIJxYiaN77Uf0cRQNzSzgfiqCk" data-i18n="cta.maps">Vedi su Maps →</a>
+        </div>
+      </article>
+
+    </div>
+
+    <div class="tradition-box">
+      <span class="eyebrow" data-i18n="tradition.eyebrow">Cosa ordinare</span>
+      <h3 data-i18n-html="tradition.title">Gli otto piatti <em>imperdibili</em></h3>
+      <div class="tradition-grid">
+        <div><strong>Tagliatelle al ragù</strong><span data-i18n="tradition.d1">La vera bolognese, mai con gli spaghetti.</span></div>
+        <div><strong>Tortellini in brodo</strong><span data-i18n="tradition.d2">Piccoli, fatti a mano, in brodo di cappone.</span></div>
+        <div><strong>Lasagne verdi</strong><span data-i18n="tradition.d3">Sfoglia agli spinaci, ragù e besciamella.</span></div>
+        <div><strong>Crescentine &amp; tigelle</strong><span data-i18n="tradition.d4">Da farcire con salumi e squacquerone.</span></div>
+        <div><strong>Cotoletta alla petroniana</strong><span data-i18n="tradition.d5">Vitello, prosciutto e parmigiano.</span></div>
+        <div><strong>Mortadella IGP</strong><span data-i18n="tradition.d6">Servita a cubetti come aperitivo.</span></div>
+        <div><strong>Lambrusco</strong><span data-i18n="tradition.d7">Il vino frizzante che accompagna tutto.</span></div>
+        <div><strong>Erbazzone</strong><span data-i18n="tradition.d8">Torta salata di bietole e Parmigiano.</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VEDERE -->
+<section class="block" id="vedere" style="background:var(--cream-dark)">
+  <div class="block-inner">
+    <div class="section-head">
+      <div class="section-num">V</div>
+      <div>
+        <span class="eyebrow" data-i18n="see.chapter">Capitolo Quinto</span>
+        <h2 data-i18n="see.title">Cosa vedere, dove perdersi.</h2>
+      </div>
+    </div>
+
+    <p class="intro-text" data-i18n="see.intro">
+      Bologna si scopre camminando. Ecco i luoghi che ogni ospite dovrebbe visitare —
+      tutti raggiungibili a piedi dalla casa. Cliccate per aprirli su Google Maps e vedere foto, orari e percorsi.
+    </p>
+
+    <div class="place-list">
+
+      <article class="place-card">
+        <div class="place-num">i.</div>
+        <div class="place-info">
+          <h4 data-i18n="see.s1.name">Le Due Torri</h4>
+          <div class="place-meta">
+            <span data-i18n="see.s1.tag">Simbolo della città</span>
+            <span data-i18n="see.s1.dist">300 m · 4 min a piedi</span>
+            <span data-i18n="see.s1.era">XII secolo</span>
+          </div>
+          <p data-i18n="see.s1.desc">Asinelli (97 m) e Garisenda, le torri pendenti di Bologna, simbolo medievale della città dal 1109. La Asinelli si poteva salire — 498 scalini — per una vista mozzafiato; la Garisenda è in restauro fino al 2027 perché pende troppo.</p>
+          <p class="place-tip" data-i18n="see.s1.tip">Verificate l'apertura prima di andare. La vista da sotto, comunque, è già spettacolare.</p>
+        </div>
+        <div class="place-action">
+          <a class="place-link" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Due+Torri+Bologna" data-i18n="cta.maps">Vedi su Maps →</a>
+        </div>
+      </article>
+
+      <article class="place-card">
+        <div class="place-num">ii.</div>
+        <div class="place-info">
+          <h4 data-i18n="see.s2.name">Piazza Maggiore &amp; San Petronio</h4>
+          <div class="place-meta">
+            <span data-i18n="see.s2.tag">Cuore della città</span>
+            <span data-i18n="see.s2.dist">450 m · 6 min a piedi</span>
+          </div>
+          <p data-i18n="see.s2.desc">La piazza monumentale con la Basilica di San Petronio, la sesta chiesa più grande d'Europa, e Palazzo d'Accursio. A pochi metri, la Fontana del Nettuno del Giambologna, uno dei simboli più famosi della città.</p>
+          <p class="place-tip" data-i18n="see.s2.tip">D'estate ospita "Sotto le Stelle del Cinema", proiezioni gratuite a luglio.</p>
+        </div>
+        <div class="place-action">
+          <a class="place-link" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Piazza+Maggiore+Bologna" data-i18n="cta.maps">Vedi su Maps →</a>
+        </div>
+      </article>
+
+      <article class="place-card">
+        <div class="place-num">iii.</div>
+        <div class="place-info">
+          <h4 data-i18n="see.s3.name">Il Quadrilatero</h4>
+          <div class="place-meta">
+            <span data-i18n="see.s3.tag">Mercato storico</span>
+            <span data-i18n="see.s3.dist">400 m · 5 min a piedi</span>
+          </div>
+          <p data-i18n="see.s3.desc">L'antico mercato medievale, oggi pieno di botteghe gastronomiche, banchi di pesce, salumerie e wine bar all'aperto. Imperdibile per l'aperitivo bolognese: ci si siede sui tavolini in strada con un calice di Pignoletto e un tagliere.</p>
+          <p class="place-tip" data-i18n="see.s3.tip">L'orario migliore è il tardo pomeriggio, tra le 17 e le 19.</p>
+        </div>
+        <div class="place-action">
+          <a class="place-link" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Quadrilatero+Bologna" data-i18n="cta.maps">Vedi su Maps →</a>
+        </div>
+      </article>
+
+      <article class="place-card">
+        <div class="place-num">iv.</div>
+        <div class="place-info">
+          <h4 data-i18n="see.s4.name">I Portici di Bologna · UNESCO</h4>
+          <div class="place-meta">
+            <span data-i18n="see.s4.tag">Patrimonio UNESCO 2021</span>
+            <span data-i18n="see.s4.dist">Sotto casa</span>
+            <span data-i18n="see.s4.km">62 km totali</span>
+          </div>
+          <p data-i18n="see.s4.desc">62 chilometri di portici nel centro storico, riconosciuti Patrimonio dell'Umanità nel 2021. Il più lungo del mondo (3,8 km, 666 archi) sale fino al Santuario di San Luca, sulla collina che domina la città.</p>
+          <p class="place-tip" data-i18n="see.s4.tip">La passeggiata fino a San Luca è un classico bolognese: circa un'ora di cammino, all'andata in salita.</p>
+        </div>
+        <div class="place-action">
+          <a class="place-link" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Portico+San+Luca+Bologna" data-i18n="cta.maps">Vedi su Maps →</a>
+        </div>
+      </article>
+
+      <article class="place-card">
+        <div class="place-num">v.</div>
+        <div class="place-info">
+          <h4 data-i18n="see.s5.name">La Finestrella di Via Piella</h4>
+          <div class="place-meta">
+            <span data-i18n="see.s5.tag">Foto da fare</span>
+            <span data-i18n="see.s5.dist">200 m · 3 min</span>
+          </div>
+          <p data-i18n="see.s5.desc">La "piccola Venezia" di Bologna: una finestrella affacciata sul Canale delle Moline. Sotto la città scorre una rete di canali medievali — questa è una delle poche che si possono ancora vedere.</p>
+          <p class="place-tip" data-i18n="see.s5.tip">Va bene di giorno, ma con la luce del tramonto è magia pura.</p>
+        </div>
+        <div class="place-action">
+          <a class="place-link" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Finestrella+Via+Piella+Bologna" data-i18n="cta.maps">Vedi su Maps →</a>
+        </div>
+      </article>
+
+      <article class="place-card">
+        <div class="place-num">vi.</div>
+        <div class="place-info">
+          <h4 data-i18n="see.s6.name">Archiginnasio &amp; Teatro Anatomico</h4>
+          <div class="place-meta">
+            <span data-i18n="see.s6.tag">Università storica</span>
+            <span data-i18n="see.s6.dist">500 m · 7 min a piedi</span>
+            <span>1563</span>
+          </div>
+          <p data-i18n="see.s6.desc">L'antica sede dell'Università di Bologna (la più antica del mondo occidentale, 1088). All'interno, il Teatro Anatomico in legno scolpito è un capolavoro: qui dissezionavano i corpi davanti agli studenti.</p>
+          <p class="place-tip" data-i18n="see.s6.tip">Ingresso simbolico, biblioteca aperta gratuitamente. Visita rapida ma intensa.</p>
+        </div>
+        <div class="place-action">
+          <a class="place-link" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Archiginnasio+Bologna" data-i18n="cta.maps">Vedi su Maps →</a>
+        </div>
+      </article>
+
+      <article class="place-card">
+        <div class="place-num">vii.</div>
+        <div class="place-info">
+          <h4 data-i18n="see.s7.name">Santuario di San Luca</h4>
+          <div class="place-meta">
+            <span data-i18n="see.s7.tag">Vista panoramica</span>
+            <span data-i18n="see.s7.dist">5 km · bus o portico</span>
+          </div>
+          <p data-i18n="see.s7.desc">La basilica sul colle della Guardia, con la sua celebre cupola visibile da tutta Bologna. Si raggiunge con il trenino "San Luca Express" (parte da Piazza Maggiore) o a piedi sotto il portico più lungo del mondo. Vista spettacolare sulla città e sull'Appennino.</p>
+          <p class="place-tip" data-i18n="see.s7.tip">In bici è una bella sfida. A piedi, portatevi acqua: i 666 archi non sono uno scherzo.</p>
+        </div>
+        <div class="place-action">
+          <a class="place-link" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Santuario+San+Luca+Bologna" data-i18n="cta.maps">Vedi su Maps →</a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- PRATICO -->
+<section class="block" id="pratico">
+  <div class="block-inner">
+    <div class="section-head">
+      <div class="section-num">VI</div>
+      <div>
+        <span class="eyebrow" data-i18n="prac.chapter">Capitolo Sesto</span>
+        <h2 data-i18n="prac.title">Informazioni pratiche.</h2>
+      </div>
+    </div>
+
+    <div class="practical-grid">
+
+      <div class="prac-card">
+        <span class="icon">€</span>
+        <h4 data-i18n="prac.p1.title">Tassa di soggiorno</h4>
+        <p data-i18n="prac.p1.desc">Buona notizia: la tassa di soggiorno comunale è già stata incassata da Airbnb al momento della prenotazione. Non dovete pagare nulla in loco.</p>
+        <ul>
+          <li><span data-i18n="prac.p1.l1a">Stato</span><strong data-i18n="prac.p1.l1b">Inclusa nella prenotazione</strong></li>
+          <li><span data-i18n="prac.p1.l2a">Riscossa da</span><strong data-i18n="prac.p1.l2b">Airbnb (servizio host)</strong></li>
+          <li><span data-i18n="prac.p1.l3a">Da pagare al check-in</span><strong data-i18n="prac.p1.l3b">Nulla</strong></li>
+        </ul>
+      </div>
+
+      <div class="prac-card">
+        <span class="icon">⌖</span>
+        <h4 data-i18n="prac.p2.title">Trasporti pubblici (TPER)</h4>
+        <p data-i18n="prac.p2.desc">Bologna è camminabile, ma per le distanze maggiori autobus e treni sono efficienti.</p>
+        <ul>
+          <li><span data-i18n="prac.p2.l1a">Biglietto urbano</span><strong>€ 2,30 (75 min)</strong></li>
+          <li><span data-i18n="prac.p2.l2a">App ufficiale</span><strong>Roger / TPER</strong></li>
+          <li><span data-i18n="prac.p2.l3a">Aeroporto</span><strong>Marconi Express, € 11,50</strong></li>
+        </ul>
+      </div>
+
+      <div class="prac-card">
+        <span class="icon">⛔</span>
+        <h4 data-i18n="prac.p3.title">ZTL (Zona Traffico Limitato)</h4>
+        <p data-i18n="prac.p3.desc">L'appartamento è in pieno centro storico, dentro la ZTL. Se arrivate in auto, leggete attentamente.</p>
+        <ul>
+          <li><span data-i18n="prac.p3.l1a">ZTL attiva</span><strong>7:00 – 20:00</strong></li>
+          <li><span data-i18n="prac.p3.l2a">Notturna sera</span><strong data-i18n="prac.p3.l2b">Ven-Sab 22:00–7:00</strong></li>
+          <li><span data-i18n="prac.p3.l3a">Parcheggio</span><strong>Riva Reno / Staveco</strong></li>
+        </ul>
+      </div>
+
+      <div class="prac-card">
+        <span class="icon">★</span>
+        <h4 data-i18n="prac.p4.title">Servizi vicini</h4>
+        <p data-i18n="prac.p4.desc">Tutto il necessario è raggiungibile a piedi in pochi minuti.</p>
+        <ul>
+          <li><span data-i18n="prac.p4.l1a">Supermercato</span><strong data-i18n="prac.p4.l1b">Pam Local · 4 min</strong></li>
+          <li><span data-i18n="prac.p4.l2a">Farmacia 24h</span><strong data-i18n="prac.p4.l2b">BENU Centrale · 6 min</strong></li>
+          <li><span data-i18n="prac.p4.l3a">Bancomat</span><strong data-i18n="prac.p4.l3b">Via Rizzoli · 5 min</strong></li>
+          <li><span data-i18n="prac.p4.l4a">Lavanderia</span><strong data-i18n="prac.p4.l4b">Wash &amp; Dry · 8 min</strong></li>
+        </ul>
+      </div>
+
+      <div class="prac-card">
+        <span class="icon">⌘</span>
+        <h4 data-i18n="prac.p5.title">Stazione &amp; Aeroporto</h4>
+        <p data-i18n="prac.p5.desc">Bologna è il principale snodo ferroviario del Nord Italia. Da qui in 35 min a Firenze, 1h a Milano, 2h a Roma.</p>
+        <ul>
+          <li><span data-i18n="prac.p5.l1a">Stazione Centrale</span><strong data-i18n="prac.p5.l1b">1,2 km · 15 min a piedi</strong></li>
+          <li><span data-i18n="prac.p5.l2a">Aeroporto Marconi</span><strong data-i18n="prac.p5.l2b">8 km · taxi ~25 €</strong></li>
+          <li><span data-i18n="prac.p5.l3a">Marconi Express</span><strong data-i18n="prac.p5.l3b">7 min dalla stazione</strong></li>
+        </ul>
+      </div>
+
+      <div class="prac-card">
+        <span class="icon">⊙</span>
+        <h4 data-i18n="prac.p6.title">Mercati &amp; Eventi</h4>
+        <p data-i18n="prac.p6.desc">Bologna ha un ricchissimo calendario di eventi. Da non perdere nei dintorni:</p>
+        <ul>
+          <li><span data-i18n="prac.p6.l1a">Mercato delle Erbe</span><strong data-i18n="prac.p6.l1b">Lun–Sab tutto il giorno</strong></li>
+          <li><span data-i18n="prac.p6.l2a">Antiquariato</span><strong data-i18n="prac.p6.l2b">Pza Santo Stefano · 2ª dom mese</strong></li>
+          <li><span data-i18n="prac.p6.l3a">Cinema sotto le stelle</span><strong data-i18n="prac.p6.l3b">luglio · Pza Maggiore</strong></li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- EMERGENZE -->
+<section class="emergency" id="emergenze">
+  <div class="emergency-inner">
+    <span class="eyebrow" style="color:var(--ochre)" data-i18n="em.eyebrow">In caso di necessità</span>
+    <h2 data-i18n="em.title">Numeri utili</h2>
+    <p class="lead" data-i18n="em.lead">Conservate questi numeri. Per qualsiasi problema relativo alla casa, scriveteci direttamente — siamo sempre raggiungibili.</p>
+
+    <div class="emergency-grid">
+      <div class="em-card">
+        <span class="num">112</span>
+        <span class="lab" data-i18n="em.e1.lab">Numero unico</span>
+        <p class="desc" data-i18n="em.e1.desc">Polizia, soccorsi, vigili del fuoco — un solo numero per tutto.</p>
+      </div>
+      <div class="em-card">
+        <span class="num">118</span>
+        <span class="lab" data-i18n="em.e2.lab">Emergenza sanitaria</span>
+        <p class="desc" data-i18n="em.e2.desc">Ambulanza e pronto intervento medico, 24/7.</p>
+      </div>
+      <div class="em-card">
+        <span class="num">115</span>
+        <span class="lab" data-i18n="em.e3.lab">Vigili del fuoco</span>
+        <p class="desc" data-i18n="em.e3.desc">Incendi, fughe di gas, allagamenti, soccorso tecnico.</p>
+      </div>
+      <div class="em-card">
+        <span class="num">051 6478111</span>
+        <span class="lab" data-i18n="em.e4.lab">Ospedale Sant'Orsola</span>
+        <p class="desc" data-i18n="em.e4.desc">Pronto soccorso più vicino, attivo 24/7.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOST -->
+<section class="host-block" id="host">
+  <div class="host-inner">
+    <div class="host-photo"></div>
+    <div class="host-info">
+      <span class="eyebrow" data-i18n="host.eyebrow">Il vostro host</span>
+      <h3>Gilberto &amp; Elia</h3>
+      <p class="role" data-i18n="host.role">Authentic Bolognese · Superhost dal 2024</p>
+      <p data-i18n="host.bio">"Sono nato e cresciuto a Bologna, e mi piace condividere con i miei ospiti i posti che amo davvero. Per qualsiasi cosa — un consiglio per la cena, un cambio di programma, un'emergenza — scrivetemi pure. Rispondo entro poche ore."</p>
+      <div class="host-contact">
+        <div>
+          <span class="l" data-i18n="host.langs">Lingue</span>
+          <span class="v">Italiano · English · Français</span>
+        </div>
+        <div>
+          <span class="l" data-i18n="host.response">Risposta</span>
+          <span class="v" data-i18n="host.responseVal">100% · entro poche ore</span>
+        </div>
+        <div>
+          <span class="l" data-i18n="host.contact">Contatto</span>
+          <span class="v" data-i18n="host.contactVal">Tramite chat Airbnb</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="seal">PG</div>
+  <div class="name">La Porta <em>del Ghetto</em></div>
+  <div class="addr">Via Oberdan, 17 · Bologna · Italia</div>
+  <div class="copy" data-i18n="footer.copy">Buon soggiorno · Have a wonderful stay</div>
+</footer>
+
+<script>
+const I18N = {
+  it: {
+    "hero.location":"Bologna · Emilia-Romagna · IT",
+    "hero.eyebrow":"Guida Ospiti · Welcome Book",
+    "hero.title":"La Porta<br/><em>del Ghetto</em>",
+    "hero.tagline":"Un appartamento di 105 m² nel cuore medievale di Bologna, a pochi passi dalle Due Torri e da Piazza Maggiore.",
+    "hero.guests":"Ospiti","hero.bedrooms":"Camere","hero.bath":"Bagno","hero.sqm":"Metri quadri","hero.rating":"★ Rating",
+    "nav.welcome":"Benvenuto","nav.house":"La Casa","nav.wifi":"Wi-Fi & Istruzioni","nav.food":"Dove Mangiare","nav.see":"Cosa Vedere","nav.practical":"Info Pratiche","nav.emergency":"Emergenze","nav.host":"Il tuo Host",
+
+    "welcome.chapter":"Capitolo Primo","welcome.title":"Benvenuti nel cuore antico di Bologna.",
+    "welcome.lead":"Bologna la chiamano \"la Dotta, la Grassa, la Rossa\". Dotta per la più antica università del mondo occidentale, grassa per la sua cucina opulenta, rossa per il colore caldo dei suoi tetti.",
+    "welcome.p1":"Vi trovate in uno degli angoli più suggestivi della città: l'antico Ghetto Ebraico, un dedalo di vie strette e silenziose che hanno conservato l'atmosfera medievale. Da queste finestre vedrete i tetti di Bologna; sotto, i suoi famosi portici (Patrimonio UNESCO) vi accompagneranno ovunque, anche sotto la pioggia.",
+    "welcome.p2":"Abbiamo preparato questa guida con cura: tutto quello che vi serve per vivere la casa, e una selezione personale dei nostri posti del cuore in città. Mangiate, camminate, perdetevi. Bologna si racconta così.",
+    "welcome.sign1":"Buon soggiorno,","welcome.sign2":"I vostri host · Superhost",
+    "welcome.info.title":"Informazioni essenziali","welcome.info.address":"Indirizzo","welcome.info.floor":"Piano","welcome.info.floorVal":"2° piano · check-in in presenza","welcome.info.checkin":"Check-in","welcome.info.checkout":"Check-out","welcome.info.checkoutVal":"entro le 11:00",
+
+    "house.chapter":"Capitolo Secondo","house.title":"La casa, in immagini.",
+    "house.label.living":"Soggiorno","house.label.bed1":"Camera 1","house.label.bed2":"Camera 2","house.label.kitchen":"Cucina","house.label.bed3":"Camera 3",
+    "house.quote":"\"Quattro stanze affacciate sui tetti di Bologna,<br/>nel silenzio di un quartiere che il tempo ha protetto.\"",
+
+    "wifi.chapter":"Capitolo Terzo","wifi.title":"La casa, in pratica.","wifi.eyebrow":"Connessione Wi-Fi","wifi.heading":"Naviga senza pensieri","wifi.network":"Rete (SSID)","wifi.password":"Password","wifi.speed":"Velocità",
+
+    "ins1.title":"Arrivo & Check-in","ins1.desc":"Il check-in si fa di persona: vi accoglieremo direttamente in casa per consegnarvi le chiavi e mostrarvi l'appartamento.",
+    "ins1.l1":"Codice portone di strada: <strong>7890</strong>","ins1.l2":"Suonate al citofono <strong>BONAGA-MARCHETTI</strong>","ins1.l3":"Salite al 2° piano: vi consegniamo le chiavi lì","ins1.l4":"Documenti pronti: vi servirà la registrazione",
+    "ins2.title":"Riscaldamento & Climatizzazione","ins2.desc":"Il termostato del riscaldamento è in soggiorno, accanto alla porta del bagno. In ogni camera trovate un condizionatore con telecomando per regolare la temperatura.",
+    "ins2.l1":"Temperatura consigliata: 19-21°C","ins2.l2":"Spegnete condizionatori e riscaldamento quando uscite","ins2.l3":"Le finestre si chiudono ermeticamente per il rumore",
+    "ins3.title":"Cucina","ins3.desc":"La cucina è completamente attrezzata: piano cottura a gas con 5 fuochi e forno, microonde, macchina del caffè (capsule), lavastoviglie e tutto l'occorrente per cucinare.",
+    "ins3.l1":"Caffè, tè e zucchero di benvenuto in dispensa","ins3.l2":"Lavastoviglie: pasticche sotto il lavello","ins3.l3":"Sale, olio EVO e pepe a vostra disposizione",
+    "ins4.title":"Raccolta differenziata","ins4.desc":"Bologna è una città attenta all'ambiente. I bidoni sono sotto il lavello con etichette colorate. Il punto di conferimento è in Via Capo di Lucca, 2 min a piedi.",
+    "ins4.l1":"Giallo: plastica e metalli","ins4.l2":"Blu: carta e cartone","ins4.l3":"Verde: vetro · Marrone: organico",
+    "ins5.title":"Asciugamani & Lenzuola","ins5.desc":"Trovate un set per ogni ospite nella camera assegnata. Asciugamani extra nell'armadio del bagno, lenzuola pulite nel cassetto sotto il letto matrimoniale.",
+    "ins5.l1":"Cambio biancheria ogni 7 giorni","ins5.l2":"Asciugacapelli in bagno","ins5.l3":"Sapone e shampoo bio inclusi",
+    "ins6.title":"TV & Intrattenimento","ins6.desc":"In sala c'è un televisore con installati i principali canali on demand (Netflix, Prime Video, Disney+, ecc.). Potete accedere con il vostro account personale.",
+    "ins6.l1":"Usate il vostro account per accedere alle app","ins6.l2":"Ricordate di fare il <strong>logout</strong> alla fine del soggiorno","ins6.l3":"Telecomando sul tavolino del soggiorno",
+    "ins7.title":"Check-out","ins7.desc":"Prima di partire, vi chiediamo gentilmente di seguire questi piccoli accorgimenti.",
+    "ins7.l1":"Lasciare le chiavi sul tavolo della cucina","ins7.l2":"Spegnere luci, condizionatori e riscaldamento","ins7.l3":"Logout dagli account streaming sulla TV","ins7.l4":"Portare i rifiuti nei contenitori in strada","ins7.l5":"Chiudere bene la porta sbattendola",
+
+    "food.chapter":"Capitolo Quarto","food.title":"Mangiare a Bologna.",
+    "food.intro":"\"La Grassa\" si è guadagnata l'epiteto sul campo: tagliatelle al ragù, tortellini in brodo, lasagne verdi, mortadella, crescentine. Cliccate sul link di ogni indirizzo per vedere foto, recensioni e indicazioni su Google Maps.",
+    "food.walk3":"3 min a piedi","food.walk4":"4 min a piedi","food.walk5":"5 min a piedi","food.walk6":"6 min a piedi",
+    "food.r1.tag":"Trattoria tradizionale","food.r1.desc":"Una delle migliori esperienze di cucina bolognese tradizionale del centro storico. Le tagliatelle al ragù qui sono un'istituzione, le guance di manzo al Lambrusco si sciolgono in bocca. Ambiente piccolo e raccolto.","food.r1.tip":"Prenotare è d'obbligo. Chiuso il lunedì. Aperto fino alle 22:00.",
+    "food.r2.tag":"Carne & tradizione contemporanea","food.r2.desc":"La macelleria-ristorante della famiglia Zivieri, storici allevatori dell'Appennino bolognese. Materie prime selezionatissime, tartare al coltello con tartufo, taglieri di salumi imperdibili. Locale elegante, dai colori caldi.","food.r2.tip":"Aperto pranzo e cena, chiuso domenica. Prenotazione vivamente consigliata.",
+    "food.r3.tag":"Cucina della tradizione","food.r3.desc":"Atmosfera calda, accanto alla famosa \"finestrella\" sul canale. Lasagna verde, coniglio ripieno e tortellini in brodo eccellenti. Servizio attento, ambiente classico bolognese.","food.r3.tip":"Perfetto per una cena romantica. Prenotazione consigliata, chiuso domenica sera.",
+    "food.r4.tag":"Pesce & cucina ricercata","food.r4.dist":"Al piano terra del palazzo","food.r4.desc":"Letteralmente sotto casa: Ciacco si trova al piano terra del nostro stesso condominio. Una piccola gemma del centro storico, gestita da Stefano e Salvatore da quasi vent'anni. La specialità è il pesce — raro e prezioso a Bologna — ma la cucina di terra è altrettanto eccellente. Carta dei vini curatissima.","food.r4.tip":"Prenotazione fortemente consigliata. Chiuso la domenica. Aperto pranzo e cena.",
+    "food.r5.tag":"Caffè monorigine","food.r5.desc":"Per gli amanti del caffè di qualità. Selezione di chicchi monorigine (Etiopia, Ruanda, Perù), tostatura artigianale. Niente alcolici, solo caffè e dolcetti — ma quale caffè!","food.r5.tip":"Aperto 8–18 tutti i giorni. Provate il filtro etiope: raro in Italia.",
+    "food.r6.tag":"Gelateria artigianale","food.r6.desc":"Una delle gelaterie più amate di Bologna. Pistacchio cremoso, stracciatella, cioccolato & rum. Aperti anche la sera tardi, perfetti dopo cena.","food.r6.tip":"Aperto fino alle 23:30, chiuso il lunedì. Provate il \"Cremino Pistacchio\".",
+    "food.r7.tag":"Salumeria & panini","food.r7.desc":"L'istituzione bolognese per panini con salumi e taglieri. Mortadella IGP, prosciutto di Parma, parmigiano stagionato — tutto di altissima qualità, in pieno Quadrilatero. Posti all'aperto, atmosfera vivace, ottimi i calici di Lambrusco e Pignoletto.","food.r7.tip":"Aperto tutti i giorni fino alle 22 (23 venerdì e sabato). Perfetto per pranzo veloce o aperitivo.",
+
+    "tradition.eyebrow":"Cosa ordinare","tradition.title":"Gli otto piatti <em>imperdibili</em>",
+    "tradition.d1":"La vera bolognese, mai con gli spaghetti.","tradition.d2":"Piccoli, fatti a mano, in brodo di cappone.","tradition.d3":"Sfoglia agli spinaci, ragù e besciamella.","tradition.d4":"Da farcire con salumi e squacquerone.","tradition.d5":"Vitello, prosciutto e parmigiano.","tradition.d6":"Servita a cubetti come aperitivo.","tradition.d7":"Il vino frizzante che accompagna tutto.","tradition.d8":"Torta salata di bietole e Parmigiano.",
+
+    "see.chapter":"Capitolo Quinto","see.title":"Cosa vedere, dove perdersi.",
+    "see.intro":"Bologna si scopre camminando. Ecco i luoghi che ogni ospite dovrebbe visitare — tutti raggiungibili a piedi dalla casa. Cliccate per aprirli su Google Maps e vedere foto, orari e percorsi.",
+    "see.s1.name":"Le Due Torri","see.s1.tag":"Simbolo della città","see.s1.dist":"300 m · 4 min a piedi","see.s1.era":"XII secolo","see.s1.desc":"Asinelli (97 m) e Garisenda, le torri pendenti di Bologna, simbolo medievale della città dal 1109. La Asinelli si poteva salire — 498 scalini — per una vista mozzafiato; la Garisenda è in restauro fino al 2027 perché pende troppo.","see.s1.tip":"Verificate l'apertura prima di andare. La vista da sotto, comunque, è già spettacolare.",
+    "see.s2.name":"Piazza Maggiore & San Petronio","see.s2.tag":"Cuore della città","see.s2.dist":"450 m · 6 min a piedi","see.s2.desc":"La piazza monumentale con la Basilica di San Petronio, la sesta chiesa più grande d'Europa, e Palazzo d'Accursio. A pochi metri, la Fontana del Nettuno del Giambologna, uno dei simboli più famosi della città.","see.s2.tip":"D'estate ospita \"Sotto le Stelle del Cinema\", proiezioni gratuite a luglio.",
+    "see.s3.name":"Il Quadrilatero","see.s3.tag":"Mercato storico","see.s3.dist":"400 m · 5 min a piedi","see.s3.desc":"L'antico mercato medievale, oggi pieno di botteghe gastronomiche, banchi di pesce, salumerie e wine bar all'aperto. Imperdibile per l'aperitivo bolognese: ci si siede sui tavolini in strada con un calice di Pignoletto e un tagliere.","see.s3.tip":"L'orario migliore è il tardo pomeriggio, tra le 17 e le 19.",
+    "see.s4.name":"I Portici di Bologna · UNESCO","see.s4.tag":"Patrimonio UNESCO 2021","see.s4.dist":"Sotto casa","see.s4.km":"62 km totali","see.s4.desc":"62 chilometri di portici nel centro storico, riconosciuti Patrimonio dell'Umanità nel 2021. Il più lungo del mondo (3,8 km, 666 archi) sale fino al Santuario di San Luca, sulla collina che domina la città.","see.s4.tip":"La passeggiata fino a San Luca è un classico bolognese: circa un'ora di cammino, all'andata in salita.",
+    "see.s5.name":"La Finestrella di Via Piella","see.s5.tag":"Foto da fare","see.s5.dist":"200 m · 3 min","see.s5.desc":"La \"piccola Venezia\" di Bologna: una finestrella affacciata sul Canale delle Moline. Sotto la città scorre una rete di canali medievali — questa è una delle poche che si possono ancora vedere.","see.s5.tip":"Va bene di giorno, ma con la luce del tramonto è magia pura.",
+    "see.s6.name":"Archiginnasio & Teatro Anatomico","see.s6.tag":"Università storica","see.s6.dist":"500 m · 7 min a piedi","see.s6.desc":"L'antica sede dell'Università di Bologna (la più antica del mondo occidentale, 1088). All'interno, il Teatro Anatomico in legno scolpito è un capolavoro: qui dissezionavano i corpi davanti agli studenti.","see.s6.tip":"Ingresso simbolico, biblioteca aperta gratuitamente. Visita rapida ma intensa.",
+    "see.s7.name":"Santuario di San Luca","see.s7.tag":"Vista panoramica","see.s7.dist":"5 km · bus o portico","see.s7.desc":"La basilica sul colle della Guardia, con la sua celebre cupola visibile da tutta Bologna. Si raggiunge con il trenino \"San Luca Express\" (parte da Piazza Maggiore) o a piedi sotto il portico più lungo del mondo. Vista spettacolare sulla città e sull'Appennino.","see.s7.tip":"In bici è una bella sfida. A piedi, portatevi acqua: i 666 archi non sono uno scherzo.",
+
+    "cta.maps":"Vedi su Maps →",
+
+    "prac.chapter":"Capitolo Sesto","prac.title":"Informazioni pratiche.",
+    "prac.p1.title":"Tassa di soggiorno","prac.p1.desc":"Buona notizia: la tassa di soggiorno comunale è già stata incassata da Airbnb al momento della prenotazione. Non dovete pagare nulla in loco.","prac.p1.l1a":"Stato","prac.p1.l1b":"Inclusa nella prenotazione","prac.p1.l2a":"Riscossa da","prac.p1.l2b":"Airbnb (servizio host)","prac.p1.l3a":"Da pagare al check-in","prac.p1.l3b":"Nulla",
+    "prac.p2.title":"Trasporti pubblici (TPER)","prac.p2.desc":"Bologna è camminabile, ma per le distanze maggiori autobus e treni sono efficienti.","prac.p2.l1a":"Biglietto urbano","prac.p2.l2a":"App ufficiale","prac.p2.l3a":"Aeroporto",
+    "prac.p3.title":"ZTL (Zona Traffico Limitato)","prac.p3.desc":"L'appartamento è in pieno centro storico, dentro la ZTL. Se arrivate in auto, leggete attentamente.","prac.p3.l1a":"ZTL attiva","prac.p3.l2a":"Notturna sera","prac.p3.l2b":"Ven-Sab 22:00–7:00","prac.p3.l3a":"Parcheggio",
+    "prac.p4.title":"Servizi vicini","prac.p4.desc":"Tutto il necessario è raggiungibile a piedi in pochi minuti.","prac.p4.l1a":"Supermercato","prac.p4.l1b":"Pam Local · 4 min","prac.p4.l2a":"Farmacia 24h","prac.p4.l2b":"BENU Centrale · 6 min","prac.p4.l3a":"Bancomat","prac.p4.l3b":"Via Rizzoli · 5 min","prac.p4.l4a":"Lavanderia","prac.p4.l4b":"Wash & Dry · 8 min",
+    "prac.p5.title":"Stazione & Aeroporto","prac.p5.desc":"Bologna è il principale snodo ferroviario del Nord Italia. Da qui in 35 min a Firenze, 1h a Milano, 2h a Roma.","prac.p5.l1a":"Stazione Centrale","prac.p5.l1b":"1,2 km · 15 min a piedi","prac.p5.l2a":"Aeroporto Marconi","prac.p5.l2b":"8 km · taxi ~25 €","prac.p5.l3a":"Marconi Express","prac.p5.l3b":"7 min dalla stazione",
+    "prac.p6.title":"Mercati & Eventi","prac.p6.desc":"Bologna ha un ricchissimo calendario di eventi. Da non perdere nei dintorni:","prac.p6.l1a":"Mercato delle Erbe","prac.p6.l1b":"Lun–Sab tutto il giorno","prac.p6.l2a":"Antiquariato","prac.p6.l2b":"Pza Santo Stefano · 2ª dom mese","prac.p6.l3a":"Cinema sotto le stelle","prac.p6.l3b":"luglio · Pza Maggiore",
+
+    "em.eyebrow":"In caso di necessità","em.title":"Numeri utili","em.lead":"Conservate questi numeri. Per qualsiasi problema relativo alla casa, scriveteci direttamente — siamo sempre raggiungibili.",
+    "em.e1.lab":"Numero unico","em.e1.desc":"Polizia, soccorsi, vigili del fuoco — un solo numero per tutto.",
+    "em.e2.lab":"Emergenza sanitaria","em.e2.desc":"Ambulanza e pronto intervento medico, 24/7.",
+    "em.e3.lab":"Vigili del fuoco","em.e3.desc":"Incendi, fughe di gas, allagamenti, soccorso tecnico.",
+    "em.e4.lab":"Ospedale Sant'Orsola","em.e4.desc":"Pronto soccorso più vicino, attivo 24/7.",
+
+    "host.eyebrow":"Il vostro host","host.role":"Authentic Bolognese · Superhost dal 2024","host.bio":"\"Sono nato e cresciuto a Bologna, e mi piace condividere con i miei ospiti i posti che amo davvero. Per qualsiasi cosa — un consiglio per la cena, un cambio di programma, un'emergenza — scrivetemi pure. Rispondo entro poche ore.\"","host.langs":"Lingue","host.response":"Risposta","host.responseVal":"100% · entro poche ore","host.contact":"Contatto","host.contactVal":"Tramite chat Airbnb",
+
+    "footer.copy":"Buon soggiorno · Have a wonderful stay"
+  },
+
+  en: {
+    "hero.location":"Bologna · Emilia-Romagna · IT",
+    "hero.eyebrow":"Guest Guide · Welcome Book",
+    "hero.title":"La Porta<br/><em>del Ghetto</em>",
+    "hero.tagline":"A 105 m² apartment in the medieval heart of Bologna, just steps from the Two Towers and Piazza Maggiore.",
+    "hero.guests":"Guests","hero.bedrooms":"Bedrooms","hero.bath":"Bathroom","hero.sqm":"Square meters","hero.rating":"★ Rating",
+    "nav.welcome":"Welcome","nav.house":"The Home","nav.wifi":"Wi-Fi & Instructions","nav.food":"Where to Eat","nav.see":"What to See","nav.practical":"Practical Info","nav.emergency":"Emergencies","nav.host":"Your Host",
+
+    "welcome.chapter":"Chapter One","welcome.title":"Welcome to the ancient heart of Bologna.",
+    "welcome.lead":"Bologna is known as \"the Learned, the Fat, the Red.\" Learned for the oldest university in the Western world, fat for its rich cuisine, red for the warm color of its rooftops.",
+    "welcome.p1":"You're in one of the most evocative corners of the city: the ancient Jewish Ghetto, a maze of narrow, silent streets that has preserved its medieval atmosphere. From these windows you'll see Bologna's rooftops; below, its famous porticoes (a UNESCO World Heritage Site) will take you everywhere, even in the rain.",
+    "welcome.p2":"We've prepared this guide with care: everything you need to enjoy the home, plus a personal selection of our favorite places in the city. Eat, walk, get lost. That's how Bologna reveals itself.",
+    "welcome.sign1":"Have a wonderful stay,","welcome.sign2":"Your hosts · Superhost",
+    "welcome.info.title":"Essential information","welcome.info.address":"Address","welcome.info.floor":"Floor","welcome.info.floorVal":"2nd floor · in-person check-in","welcome.info.checkin":"Check-in","welcome.info.checkout":"Check-out","welcome.info.checkoutVal":"by 11:00 AM",
+
+    "house.chapter":"Chapter Two","house.title":"The home, in pictures.",
+    "house.label.living":"Living room","house.label.bed1":"Bedroom 1","house.label.bed2":"Bedroom 2","house.label.kitchen":"Kitchen","house.label.bed3":"Bedroom 3",
+    "house.quote":"\"Four rooms overlooking the rooftops of Bologna,<br/>in the silence of a quarter that time has protected.\"",
+
+    "wifi.chapter":"Chapter Three","wifi.title":"The home, in practice.","wifi.eyebrow":"Wi-Fi connection","wifi.heading":"Browse without worries","wifi.network":"Network (SSID)","wifi.password":"Password","wifi.speed":"Speed",
+
+    "ins1.title":"Arrival & Check-in","ins1.desc":"Check-in is in person: we'll welcome you directly at the apartment, hand over the keys and show you around.",
+    "ins1.l1":"Street door code: <strong>7890</strong>","ins1.l2":"Ring the buzzer labeled <strong>BONAGA-MARCHETTI</strong>","ins1.l3":"Come up to the 2nd floor — we'll meet you there with the keys","ins1.l4":"Have your IDs ready: required for registration",
+    "ins2.title":"Heating & Air Conditioning","ins2.desc":"The heating thermostat is in the living room, next to the bathroom door. In every bedroom you'll find an air conditioner with remote to adjust the temperature.",
+    "ins2.l1":"Recommended temperature: 19–21°C","ins2.l2":"Switch off A/C and heating when you go out","ins2.l3":"Windows seal tightly to keep out noise",
+    "ins3.title":"Kitchen","ins3.desc":"The kitchen is fully equipped: 5-burner gas hob with oven, microwave, capsule coffee machine, dishwasher and everything you need to cook.",
+    "ins3.l1":"Welcome coffee, tea and sugar in the pantry","ins3.l2":"Dishwasher: tablets under the sink","ins3.l3":"Salt, EVO oil and pepper at your disposal",
+    "ins4.title":"Recycling","ins4.desc":"Bologna takes its environment seriously. Bins are under the sink with colored labels. The drop-off point is on Via Capo di Lucca, a 2-min walk away.",
+    "ins4.l1":"Yellow: plastic and metals","ins4.l2":"Blue: paper and cardboard","ins4.l3":"Green: glass · Brown: organic",
+    "ins5.title":"Towels & Linens","ins5.desc":"You'll find a set for each guest in your bedroom. Extra towels in the bathroom cabinet, clean sheets in the drawer under the double bed.",
+    "ins5.l1":"Linen change every 7 days","ins5.l2":"Hairdryer in the bathroom","ins5.l3":"Organic soap and shampoo included",
+    "ins6.title":"TV & Entertainment","ins6.desc":"In the living room there's a TV with all major on-demand services installed (Netflix, Prime Video, Disney+, etc.). You can sign in with your personal account.",
+    "ins6.l1":"Sign in with your own account to use the apps","ins6.l2":"Remember to <strong>log out</strong> at the end of your stay","ins6.l3":"Remote on the coffee table in the living room",
+    "ins7.title":"Check-out","ins7.desc":"Before you leave, please follow these small courtesies.",
+    "ins7.l1":"Leave the keys on the kitchen table","ins7.l2":"Switch off lights, A/C and heating","ins7.l3":"Log out from streaming accounts on the TV","ins7.l4":"Drop the trash in the street bins","ins7.l5":"Make sure to slam the door shut behind you",
+
+    "food.chapter":"Chapter Four","food.title":"Eating in Bologna.",
+    "food.intro":"\"The Fat\" earned its nickname honestly: tagliatelle al ragù, tortellini in broth, green lasagna, mortadella, crescentine. Tap each address to see photos, reviews and directions on Google Maps.",
+    "food.walk3":"3 min walk","food.walk4":"4 min walk","food.walk5":"5 min walk","food.walk6":"6 min walk",
+    "food.r1.tag":"Traditional trattoria","food.r1.desc":"One of the best traditional Bolognese dining experiences in the historic center. The tagliatelle al ragù here is an institution; the beef cheeks braised in Lambrusco melt in your mouth. Small, intimate atmosphere.","food.r1.tip":"Booking is essential. Closed Mondays. Open until 10 PM.",
+    "food.r2.tag":"Meat & contemporary tradition","food.r2.desc":"The butcher-restaurant of the Zivieri family, longtime breeders from the Bolognese Apennines. Top-tier raw materials, hand-cut tartare with truffle, unmissable charcuterie boards. Elegant setting, warm tones.","food.r2.tip":"Open lunch and dinner, closed Sundays. Reservation strongly recommended.",
+    "food.r3.tag":"Traditional cuisine","food.r3.desc":"Warm atmosphere, next to the famous \"little window\" on the canal. Excellent green lasagna, stuffed rabbit and tortellini in broth. Attentive service, classic Bolognese setting.","food.r3.tip":"Perfect for a romantic dinner. Reservation recommended; closed Sunday evening.",
+    "food.r4.tag":"Seafood & refined cuisine","food.r4.dist":"On the ground floor of the building","food.r4.desc":"Literally downstairs: Ciacco is on the ground floor of our very own building. A small gem in the historic center, run by Stefano and Salvatore for nearly twenty years. The specialty is seafood — rare and prized in Bologna — but the meat dishes are equally excellent. Carefully curated wine list.","food.r4.tip":"Reservation strongly recommended. Closed Sundays. Open lunch and dinner.",
+    "food.r5.tag":"Single-origin coffee","food.r5.desc":"For coffee lovers. Selection of single-origin beans (Ethiopia, Rwanda, Peru), artisan roasted. No alcohol, just coffee and pastries — but what coffee!","food.r5.tip":"Open 8 AM–6 PM daily. Try the Ethiopian filter: rare in Italy.",
+    "food.r6.tag":"Artisan gelateria","food.r6.desc":"One of Bologna's most beloved gelaterias. Creamy pistachio, stracciatella, chocolate & rum. Open late, perfect after dinner.","food.r6.tip":"Open until 11:30 PM, closed Mondays. Try the \"Cremino Pistacchio.\"",
+    "food.r7.tag":"Deli & sandwiches","food.r7.desc":"The Bolognese institution for sandwiches with cured meats and charcuterie boards. Mortadella IGP, Parma ham, aged Parmigiano — all top quality, right in the Quadrilatero. Outdoor seating, lively atmosphere, excellent glasses of Lambrusco and Pignoletto.","food.r7.tip":"Open daily until 10 PM (11 PM Friday and Saturday). Perfect for a quick lunch or aperitivo.",
+
+    "tradition.eyebrow":"What to order","tradition.title":"The eight <em>essential</em> dishes",
+    "tradition.d1":"The real Bolognese — never with spaghetti.","tradition.d2":"Small, hand-folded, in capon broth.","tradition.d3":"Spinach pasta sheets, ragù and béchamel.","tradition.d4":"To stuff with cured meats and squacquerone cheese.","tradition.d5":"Veal, prosciutto and Parmesan.","tradition.d6":"Served as cubes for an aperitivo.","tradition.d7":"The sparkling wine that pairs with everything.","tradition.d8":"Savory tart of chard and Parmesan.",
+
+    "see.chapter":"Chapter Five","see.title":"What to see, where to wander.",
+    "see.intro":"Bologna reveals itself on foot. Here are the places every guest should visit — all walkable from the apartment. Tap to open them on Google Maps for photos, hours and directions.",
+    "see.s1.name":"The Two Towers","see.s1.tag":"Symbol of the city","see.s1.dist":"300 m · 4 min walk","see.s1.era":"12th century","see.s1.desc":"Asinelli (97 m) and Garisenda, Bologna's leaning towers, the city's medieval symbol since 1109. The Asinelli used to be climbable — 498 steps — for a stunning view; the Garisenda is under restoration until 2027 because it leans too much.","see.s1.tip":"Check opening status before going. The view from below is already spectacular.",
+    "see.s2.name":"Piazza Maggiore & San Petronio","see.s2.tag":"Heart of the city","see.s2.dist":"450 m · 6 min walk","see.s2.desc":"The monumental square with the Basilica of San Petronio, the sixth largest church in Europe, and Palazzo d'Accursio. A few steps away, the Neptune Fountain by Giambologna, one of the city's most famous symbols.","see.s2.tip":"In summer it hosts \"Sotto le Stelle del Cinema,\" free open-air screenings in July.",
+    "see.s3.name":"The Quadrilatero","see.s3.tag":"Historic market","see.s3.dist":"400 m · 5 min walk","see.s3.desc":"The ancient medieval market, now full of food shops, fishmongers, delis and open-air wine bars. A must for the Bolognese aperitivo: street tables, a glass of Pignoletto and a board of cured meats.","see.s3.tip":"Best time: late afternoon, between 5 and 7 PM.",
+    "see.s4.name":"The Porticoes of Bologna · UNESCO","see.s4.tag":"UNESCO Heritage 2021","see.s4.dist":"Right outside","see.s4.km":"62 km total","see.s4.desc":"62 kilometers of porticoes in the historic center, recognized as a UNESCO World Heritage Site in 2021. The world's longest (3.8 km, 666 arches) climbs to the Sanctuary of San Luca on the hill overlooking the city.","see.s4.tip":"The walk to San Luca is a Bolognese classic: about an hour, uphill on the way up.",
+    "see.s5.name":"The Little Window of Via Piella","see.s5.tag":"Photo spot","see.s5.dist":"200 m · 3 min","see.s5.desc":"Bologna's \"little Venice\": a small window opening onto the Canale delle Moline. A network of medieval canals runs beneath the city — this is one of the few you can still see.","see.s5.tip":"Lovely by day, but truly magical at sunset.",
+    "see.s6.name":"Archiginnasio & Anatomical Theatre","see.s6.tag":"Historic university","see.s6.dist":"500 m · 7 min walk","see.s6.desc":"The original seat of the University of Bologna (the oldest in the Western world, 1088). Inside, the carved wooden Anatomical Theatre is a masterpiece: bodies were dissected here in front of students.","see.s6.tip":"Symbolic entry fee, library free to visit. Quick but intense.",
+    "see.s7.name":"Sanctuary of San Luca","see.s7.tag":"Panoramic view","see.s7.dist":"5 km · bus or portico","see.s7.desc":"The basilica on Colle della Guardia, with its iconic dome visible from all over Bologna. Reachable by the \"San Luca Express\" trolley (departs from Piazza Maggiore) or on foot under the longest portico in the world. Spectacular view of the city and Apennines.","see.s7.tip":"A nice bike challenge. On foot, bring water: the 666 arches are no joke.",
+
+    "cta.maps":"View on Maps →",
+
+    "prac.chapter":"Chapter Six","prac.title":"Practical information.",
+    "prac.p1.title":"City tax","prac.p1.desc":"Good news: the city tax has already been collected by Airbnb at the time of booking. You don't need to pay anything on site.","prac.p1.l1a":"Status","prac.p1.l1b":"Included in your booking","prac.p1.l2a":"Collected by","prac.p1.l2b":"Airbnb (host service)","prac.p1.l3a":"Due at check-in","prac.p1.l3b":"Nothing",
+    "prac.p2.title":"Public transport (TPER)","prac.p2.desc":"Bologna is walkable, but for longer distances buses and trains are efficient.","prac.p2.l1a":"Urban ticket","prac.p2.l2a":"Official app","prac.p2.l3a":"Airport",
+    "prac.p3.title":"ZTL (Limited Traffic Zone)","prac.p3.desc":"The apartment is in the historic center, inside the ZTL. If you're arriving by car, read this carefully.","prac.p3.l1a":"ZTL active","prac.p3.l2a":"Night ZTL","prac.p3.l2b":"Fri-Sat 22:00–7:00","prac.p3.l3a":"Parking",
+    "prac.p4.title":"Nearby services","prac.p4.desc":"Everything you need is within a short walk.","prac.p4.l1a":"Supermarket","prac.p4.l1b":"Pam Local · 4 min","prac.p4.l2a":"24h Pharmacy","prac.p4.l2b":"BENU Centrale · 6 min","prac.p4.l3a":"ATM","prac.p4.l3b":"Via Rizzoli · 5 min","prac.p4.l4a":"Laundry","prac.p4.l4b":"Wash & Dry · 8 min",
+    "prac.p5.title":"Station & Airport","prac.p5.desc":"Bologna is the main rail hub of Northern Italy. From here: 35 min to Florence, 1h to Milan, 2h to Rome.","prac.p5.l1a":"Central Station","prac.p5.l1b":"1.2 km · 15 min walk","prac.p5.l2a":"Marconi Airport","prac.p5.l2b":"8 km · taxi ~€25","prac.p5.l3a":"Marconi Express","prac.p5.l3b":"7 min from station",
+    "prac.p6.title":"Markets & Events","prac.p6.desc":"Bologna has a rich calendar of events. Don't miss these:","prac.p6.l1a":"Mercato delle Erbe","prac.p6.l1b":"Mon–Sat all day","prac.p6.l2a":"Antiques fair","prac.p6.l2b":"Pza Santo Stefano · 2nd Sun monthly","prac.p6.l3a":"Open-air cinema","prac.p6.l3b":"July · Pza Maggiore",
+
+    "em.eyebrow":"In case of need","em.title":"Useful numbers","em.lead":"Save these numbers. For any issue with the home, message us directly — we're always reachable.",
+    "em.e1.lab":"Single emergency","em.e1.desc":"Police, ambulance, fire — one number for everything.",
+    "em.e2.lab":"Medical emergency","em.e2.desc":"Ambulance and emergency medical care, 24/7.",
+    "em.e3.lab":"Fire department","em.e3.desc":"Fires, gas leaks, floods, technical rescue.",
+    "em.e4.lab":"Sant'Orsola Hospital","em.e4.desc":"Nearest emergency room, open 24/7.",
+
+    "host.eyebrow":"Your host","host.role":"Authentic Bolognese · Superhost since 2024","host.bio":"\"I was born and raised in Bologna, and I love sharing the places I truly love with my guests. For anything — a dinner tip, a change of plans, an emergency — just message me. I usually reply within a few hours.\"","host.langs":"Languages","host.response":"Response","host.responseVal":"100% · within a few hours","host.contact":"Contact","host.contactVal":"Through Airbnb chat",
+
+    "footer.copy":"Have a wonderful stay · Buon soggiorno"
+  },
+
+  es: {
+    "hero.location":"Bolonia · Emilia-Romagna · IT",
+    "hero.eyebrow":"Guía de Huéspedes · Welcome Book",
+    "hero.title":"La Porta<br/><em>del Ghetto</em>",
+    "hero.tagline":"Un apartamento de 105 m² en el corazón medieval de Bolonia, a pocos pasos de las Dos Torres y de Piazza Maggiore.",
+    "hero.guests":"Huéspedes","hero.bedrooms":"Habitaciones","hero.bath":"Baño","hero.sqm":"Metros cuadrados","hero.rating":"★ Valoración",
+    "nav.welcome":"Bienvenida","nav.house":"La Casa","nav.wifi":"Wi-Fi & Instrucciones","nav.food":"Dónde Comer","nav.see":"Qué Ver","nav.practical":"Info Prácticas","nav.emergency":"Emergencias","nav.host":"Tu Anfitrión",
+
+    "welcome.chapter":"Capítulo Primero","welcome.title":"Bienvenidos al corazón antiguo de Bolonia.",
+    "welcome.lead":"A Bolonia la llaman \"la Docta, la Gorda, la Roja\". Docta por la universidad más antigua del mundo occidental, gorda por su cocina opulenta, roja por el color cálido de sus tejados.",
+    "welcome.p1":"Os encontráis en uno de los rincones más sugerentes de la ciudad: el antiguo Gueto Judío, un laberinto de calles estrechas y silenciosas que han conservado su atmósfera medieval. Desde estas ventanas veréis los tejados de Bolonia; abajo, sus famosos pórticos (Patrimonio UNESCO) os acompañarán a todas partes, incluso bajo la lluvia.",
+    "welcome.p2":"Hemos preparado esta guía con cuidado: todo lo que necesitáis para vivir la casa, y una selección personal de nuestros lugares favoritos en la ciudad. Comed, caminad, perdeos. Bolonia se cuenta así.",
+    "welcome.sign1":"Buena estancia,","welcome.sign2":"Vuestros anfitriones · Superhost",
+    "welcome.info.title":"Información esencial","welcome.info.address":"Dirección","welcome.info.floor":"Planta","welcome.info.floorVal":"2ª planta · check-in en persona","welcome.info.checkin":"Check-in","welcome.info.checkout":"Check-out","welcome.info.checkoutVal":"antes de las 11:00",
+
+    "house.chapter":"Capítulo Segundo","house.title":"La casa, en imágenes.",
+    "house.label.living":"Salón","house.label.bed1":"Habitación 1","house.label.bed2":"Habitación 2","house.label.kitchen":"Cocina","house.label.bed3":"Habitación 3",
+    "house.quote":"\"Cuatro habitaciones asomadas a los tejados de Bolonia,<br/>en el silencio de un barrio que el tiempo ha protegido.\"",
+
+    "wifi.chapter":"Capítulo Tercero","wifi.title":"La casa, en la práctica.","wifi.eyebrow":"Conexión Wi-Fi","wifi.heading":"Navega sin preocupaciones","wifi.network":"Red (SSID)","wifi.password":"Contraseña","wifi.speed":"Velocidad",
+
+    "ins1.title":"Llegada & Check-in","ins1.desc":"El check-in se hace en persona: os recibiremos directamente en el apartamento, os entregaremos las llaves y os mostraremos la casa.",
+    "ins1.l1":"Código del portal de la calle: <strong>7890</strong>","ins1.l2":"Llamad al portero <strong>BONAGA-MARCHETTI</strong>","ins1.l3":"Subid al 2º piso: os entregaremos las llaves allí","ins1.l4":"Documentos a mano: necesarios para el registro",
+    "ins2.title":"Calefacción & Aire acondicionado","ins2.desc":"El termostato de la calefacción está en el salón, junto a la puerta del baño. En cada habitación encontraréis un aire acondicionado con mando para regular la temperatura.",
+    "ins2.l1":"Temperatura recomendada: 19–21°C","ins2.l2":"Apagad aire acondicionado y calefacción al salir","ins2.l3":"Las ventanas cierran herméticamente para aislar del ruido",
+    "ins3.title":"Cocina","ins3.desc":"La cocina está totalmente equipada: placa de gas de 5 fuegos con horno, microondas, cafetera de cápsulas, lavavajillas y todo lo necesario para cocinar.",
+    "ins3.l1":"Café, té y azúcar de bienvenida en la despensa","ins3.l2":"Lavavajillas: pastillas bajo el fregadero","ins3.l3":"Sal, AOVE y pimienta a vuestra disposición",
+    "ins4.title":"Reciclaje","ins4.desc":"Bolonia es una ciudad atenta al medio ambiente. Los cubos están bajo el fregadero con etiquetas de colores. El punto de entrega está en Via Capo di Lucca, a 2 min a pie.",
+    "ins4.l1":"Amarillo: plástico y metales","ins4.l2":"Azul: papel y cartón","ins4.l3":"Verde: vidrio · Marrón: orgánico",
+    "ins5.title":"Toallas & Sábanas","ins5.desc":"Encontraréis un juego para cada huésped en su habitación. Toallas extra en el armario del baño, sábanas limpias en el cajón bajo la cama de matrimonio.",
+    "ins5.l1":"Cambio de ropa de cama cada 7 días","ins5.l2":"Secador en el baño","ins5.l3":"Jabón y champú ecológicos incluidos",
+    "ins6.title":"TV & Entretenimiento","ins6.desc":"En el salón hay un televisor con instaladas las principales plataformas on demand (Netflix, Prime Video, Disney+, etc.). Podéis acceder con vuestra cuenta personal.",
+    "ins6.l1":"Acceded con vuestra propia cuenta a las apps","ins6.l2":"Recordad cerrar sesión (<strong>logout</strong>) al final de la estancia","ins6.l3":"Mando en la mesita del salón",
+    "ins7.title":"Check-out","ins7.desc":"Antes de partir, os pedimos amablemente seguir estas pequeñas atenciones.",
+    "ins7.l1":"Dejar las llaves en la mesa de la cocina","ins7.l2":"Apagar luces, aire acondicionado y calefacción","ins7.l3":"Cerrar sesión en las cuentas de streaming de la TV","ins7.l4":"Llevar la basura a los contenedores de la calle","ins7.l5":"Cerrar bien la puerta dándole un golpe",
+
+    "food.chapter":"Capítulo Cuarto","food.title":"Comer en Bolonia.",
+    "food.intro":"\"La Gorda\" se ha ganado el apodo a pulso: tagliatelle al ragú, tortellini en caldo, lasaña verde, mortadela, crescentine. Pulsad el enlace de cada dirección para ver fotos, reseñas e indicaciones en Google Maps.",
+    "food.walk3":"3 min a pie","food.walk4":"4 min a pie","food.walk5":"5 min a pie","food.walk6":"6 min a pie",
+    "food.r1.tag":"Trattoria tradicional","food.r1.desc":"Una de las mejores experiencias de cocina boloñesa tradicional del centro histórico. Las tagliatelle al ragú son una institución; los carrillos de ternera al Lambrusco se deshacen en la boca. Ambiente pequeño y acogedor.","food.r1.tip":"Reservar es obligatorio. Cerrado los lunes. Abierto hasta las 22:00.",
+    "food.r2.tag":"Carne & tradición contemporánea","food.r2.desc":"La carnicería-restaurante de la familia Zivieri, históricos ganaderos del Apenino boloñés. Materias primas de primer nivel, tartar al cuchillo con trufa, tablas de embutidos imperdibles. Local elegante, tonos cálidos.","food.r2.tip":"Abierto comida y cena, cerrado domingos. Reserva muy recomendada.",
+    "food.r3.tag":"Cocina tradicional","food.r3.desc":"Ambiente cálido, junto a la famosa \"ventanita\" sobre el canal. Lasaña verde, conejo relleno y tortellini en caldo excelentes. Servicio atento, ambiente clásico boloñés.","food.r3.tip":"Perfecto para una cena romántica. Reserva recomendada, cerrado domingo noche.",
+    "food.r4.tag":"Pescado & cocina refinada","food.r4.dist":"En la planta baja del edificio","food.r4.desc":"Literalmente debajo de casa: Ciacco está en la planta baja de nuestro mismo edificio. Una pequeña joya del centro histórico, llevada por Stefano y Salvatore desde hace casi veinte años. La especialidad es el pescado — raro y preciado en Bolonia — pero la cocina de tierra es igualmente excelente. Carta de vinos cuidadísima.","food.r4.tip":"Reserva muy recomendada. Cerrado domingos. Abierto comida y cena.",
+    "food.r5.tag":"Café de origen","food.r5.desc":"Para amantes del café de calidad. Selección de granos de origen único (Etiopía, Ruanda, Perú), tueste artesanal. Sin alcohol, solo café y dulces — ¡pero qué café!","food.r5.tip":"Abierto 8–18 todos los días. Probad el filtro etíope: raro en Italia.",
+    "food.r6.tag":"Heladería artesanal","food.r6.desc":"Una de las heladerías más queridas de Bolonia. Pistacho cremoso, stracciatella, chocolate y ron. Abren también por la noche, perfectos después de cenar.","food.r6.tip":"Abierto hasta las 23:30, cerrado los lunes. Probad el \"Cremino Pistacchio\".",
+    "food.r7.tag":"Charcutería & bocadillos","food.r7.desc":"La institución boloñesa para bocadillos con embutidos y tablas. Mortadela IGP, jamón de Parma, parmesano curado — todo de altísima calidad, en pleno Quadrilatero. Mesas al aire libre, ambiente animado, excelentes copas de Lambrusco y Pignoletto.","food.r7.tip":"Abierto todos los días hasta las 22 (23 viernes y sábado). Perfecto para comer rápido o aperitivo.",
+
+    "tradition.eyebrow":"Qué pedir","tradition.title":"Los ocho platos <em>imprescindibles</em>",
+    "tradition.d1":"La verdadera boloñesa, nunca con espaguetis.","tradition.d2":"Pequeños, hechos a mano, en caldo de capón.","tradition.d3":"Lámina de espinacas, ragú y bechamel.","tradition.d4":"Para rellenar con embutidos y squacquerone.","tradition.d5":"Ternera, jamón y parmesano.","tradition.d6":"Servida en cubitos como aperitivo.","tradition.d7":"El vino espumoso que acompaña todo.","tradition.d8":"Tarta salada de acelgas y parmesano.",
+
+    "see.chapter":"Capítulo Quinto","see.title":"Qué ver, dónde perderse.",
+    "see.intro":"Bolonia se descubre caminando. Aquí los lugares que todo huésped debería visitar — todos accesibles a pie desde la casa. Pulsa para abrirlos en Google Maps y ver fotos, horarios y rutas.",
+    "see.s1.name":"Las Dos Torres","see.s1.tag":"Símbolo de la ciudad","see.s1.dist":"300 m · 4 min a pie","see.s1.era":"Siglo XII","see.s1.desc":"Asinelli (97 m) y Garisenda, las torres inclinadas de Bolonia, símbolo medieval de la ciudad desde 1109. La Asinelli se podía subir — 498 escalones — para una vista impresionante; la Garisenda está en restauración hasta 2027 porque se inclina demasiado.","see.s1.tip":"Verificad la apertura antes de ir. La vista desde abajo, en cualquier caso, ya es espectacular.",
+    "see.s2.name":"Piazza Maggiore & San Petronio","see.s2.tag":"Corazón de la ciudad","see.s2.dist":"450 m · 6 min a pie","see.s2.desc":"La plaza monumental con la Basílica de San Petronio, la sexta iglesia más grande de Europa, y el Palazzo d'Accursio. A pocos metros, la Fuente de Neptuno de Giambologna, uno de los símbolos más famosos de la ciudad.","see.s2.tip":"En verano alberga \"Sotto le Stelle del Cinema\", proyecciones gratuitas en julio.",
+    "see.s3.name":"El Quadrilatero","see.s3.tag":"Mercado histórico","see.s3.dist":"400 m · 5 min a pie","see.s3.desc":"El antiguo mercado medieval, hoy lleno de tiendas gourmet, pescaderías, charcuterías y wine bars al aire libre. Imprescindible para el aperitivo boloñés: te sientas en las mesas en la calle con una copa de Pignoletto y una tabla.","see.s3.tip":"La mejor hora es al final de la tarde, entre las 17 y las 19.",
+    "see.s4.name":"Los Pórticos de Bolonia · UNESCO","see.s4.tag":"Patrimonio UNESCO 2021","see.s4.dist":"Bajo casa","see.s4.km":"62 km totales","see.s4.desc":"62 kilómetros de pórticos en el centro histórico, reconocidos como Patrimonio de la Humanidad en 2021. El más largo del mundo (3,8 km, 666 arcos) sube hasta el Santuario de San Luca, en la colina que domina la ciudad.","see.s4.tip":"El paseo hasta San Luca es un clásico boloñés: alrededor de una hora, en subida a la ida.",
+    "see.s5.name":"La Ventanita de Via Piella","see.s5.tag":"Foto obligada","see.s5.dist":"200 m · 3 min","see.s5.desc":"La \"pequeña Venecia\" de Bolonia: una ventanita asomada al Canale delle Moline. Bajo la ciudad fluye una red de canales medievales — esta es una de las pocas que aún se pueden ver.","see.s5.tip":"De día está bien, pero con la luz del atardecer es magia pura.",
+    "see.s6.name":"Archiginnasio & Teatro Anatómico","see.s6.tag":"Universidad histórica","see.s6.dist":"500 m · 7 min a pie","see.s6.desc":"La antigua sede de la Universidad de Bolonia (la más antigua del mundo occidental, 1088). Dentro, el Teatro Anatómico tallado en madera es una obra maestra: aquí diseccionaban los cuerpos delante de los estudiantes.","see.s6.tip":"Entrada simbólica, biblioteca abierta gratuitamente. Visita rápida pero intensa.",
+    "see.s7.name":"Santuario de San Luca","see.s7.tag":"Vista panorámica","see.s7.dist":"5 km · bus o pórtico","see.s7.desc":"La basílica en el Colle della Guardia, con su célebre cúpula visible desde toda Bolonia. Se llega con el trenecito \"San Luca Express\" (sale de Piazza Maggiore) o a pie bajo el pórtico más largo del mundo. Vista espectacular sobre la ciudad y los Apeninos.","see.s7.tip":"En bici es un buen reto. A pie, llevad agua: los 666 arcos no son broma.",
+
+    "cta.maps":"Ver en Maps →",
+
+    "prac.chapter":"Capítulo Sexto","prac.title":"Información práctica.",
+    "prac.p1.title":"Tasa de estancia","prac.p1.desc":"Buenas noticias: la tasa de estancia ya ha sido cobrada por Airbnb en el momento de la reserva. No tenéis que pagar nada en el alojamiento.","prac.p1.l1a":"Estado","prac.p1.l1b":"Incluida en la reserva","prac.p1.l2a":"Cobrada por","prac.p1.l2b":"Airbnb (servicio host)","prac.p1.l3a":"A pagar en el check-in","prac.p1.l3b":"Nada",
+    "prac.p2.title":"Transporte público (TPER)","prac.p2.desc":"Bolonia es una ciudad caminable, pero para distancias mayores autobuses y trenes son eficientes.","prac.p2.l1a":"Billete urbano","prac.p2.l2a":"App oficial","prac.p2.l3a":"Aeropuerto",
+    "prac.p3.title":"ZTL (Zona de Tráfico Limitado)","prac.p3.desc":"El apartamento está en pleno centro histórico, dentro de la ZTL. Si llegáis en coche, leed con atención.","prac.p3.l1a":"ZTL activa","prac.p3.l2a":"ZTL nocturna","prac.p3.l2b":"Vie-Sáb 22:00–7:00","prac.p3.l3a":"Aparcamiento",
+    "prac.p4.title":"Servicios cercanos","prac.p4.desc":"Todo lo necesario está a pocos minutos a pie.","prac.p4.l1a":"Supermercado","prac.p4.l1b":"Pam Local · 4 min","prac.p4.l2a":"Farmacia 24h","prac.p4.l2b":"BENU Centrale · 6 min","prac.p4.l3a":"Cajero","prac.p4.l3b":"Via Rizzoli · 5 min","prac.p4.l4a":"Lavandería","prac.p4.l4b":"Wash & Dry · 8 min",
+    "prac.p5.title":"Estación & Aeropuerto","prac.p5.desc":"Bolonia es el principal nudo ferroviario del norte de Italia. Desde aquí: 35 min a Florencia, 1h a Milán, 2h a Roma.","prac.p5.l1a":"Estación Central","prac.p5.l1b":"1,2 km · 15 min a pie","prac.p5.l2a":"Aeropuerto Marconi","prac.p5.l2b":"8 km · taxi ~25 €","prac.p5.l3a":"Marconi Express","prac.p5.l3b":"7 min desde la estación",
+    "prac.p6.title":"Mercados & Eventos","prac.p6.desc":"Bolonia tiene un calendario riquísimo. Que no os perdáis:","prac.p6.l1a":"Mercato delle Erbe","prac.p6.l1b":"Lun–Sáb todo el día","prac.p6.l2a":"Antigüedades","prac.p6.l2b":"Pza Santo Stefano · 2º dom. del mes","prac.p6.l3a":"Cine bajo las estrellas","prac.p6.l3b":"julio · Pza Maggiore",
+
+    "em.eyebrow":"En caso de necesidad","em.title":"Números útiles","em.lead":"Conservad estos números. Para cualquier problema con la casa, escribidnos directamente — siempre estamos disponibles.",
+    "em.e1.lab":"Número único","em.e1.desc":"Policía, ambulancia, bomberos — un solo número para todo.",
+    "em.e2.lab":"Emergencia sanitaria","em.e2.desc":"Ambulancia y atención médica urgente, 24/7.",
+    "em.e3.lab":"Bomberos","em.e3.desc":"Incendios, fugas de gas, inundaciones, rescate técnico.",
+    "em.e4.lab":"Hospital Sant'Orsola","em.e4.desc":"Urgencias más cercanas, abierto 24/7.",
+
+    "host.eyebrow":"Vuestro anfitrión","host.role":"Boloñés auténtico · Superhost desde 2024","host.bio":"\"Nací y crecí en Bolonia, y me gusta compartir con mis huéspedes los lugares que de verdad amo. Para cualquier cosa — un consejo para cenar, un cambio de planes, una emergencia — escribidme. Respondo en pocas horas.\"","host.langs":"Idiomas","host.response":"Respuesta","host.responseVal":"100% · en pocas horas","host.contact":"Contacto","host.contactVal":"A través del chat de Airbnb",
+
+    "footer.copy":"Buena estancia · Have a wonderful stay"
+  }
+};
+
+// House gallery labels: keys map to data-label (since we use [data-i18n-attr])
+const HOUSE_LABELS_KEYS = ['house.label.living','house.label.bed1','house.label.bed2','house.label.kitchen','house.label.bed3'];
+
+function setLang(lang){
+  if(!I18N[lang]) return;
+  document.body.classList.add('switching');
+
+  setTimeout(()=>{
+    const dict = I18N[lang];
+    document.documentElement.lang = lang;
+
+    // text content
+    document.querySelectorAll('[data-i18n]').forEach(el=>{
+      const key = el.getAttribute('data-i18n');
+      if(dict[key] !== undefined) el.textContent = dict[key];
+    });
+
+    // HTML content (allows <br>, <em>)
+    document.querySelectorAll('[data-i18n-html]').forEach(el=>{
+      const key = el.getAttribute('data-i18n-html');
+      if(dict[key] !== undefined) el.innerHTML = dict[key];
+    });
+
+    // House gallery labels (data-label attribute)
+    const galleryImgs = document.querySelectorAll('.house-gallery .img');
+    galleryImgs.forEach((img, i)=>{
+      const labelKey = HOUSE_LABELS_KEYS[i];
+      if(labelKey && dict[labelKey]) img.setAttribute('data-label', dict[labelKey]);
+    });
+
+    // active button
+    document.querySelectorAll('.lang-switch button').forEach(btn=>{
+      btn.classList.toggle('active', btn.dataset.lang === lang);
+    });
+
+    // page title
+    const titles = {
+      it:"La Porta del Ghetto · Guida Ospiti",
+      en:"La Porta del Ghetto · Guest Guide",
+      es:"La Porta del Ghetto · Guía de Huéspedes"
+    };
+    document.title = titles[lang];
+
+    // store preference
+    try{ localStorage.setItem('pdg_lang', lang); }catch(e){}
+
+    document.body.classList.remove('switching');
+  }, 150);
+}
+
+// auto-detect on first load: localStorage > browser language > italian
+(function init(){
+  let saved = null;
+  try{ saved = localStorage.getItem('pdg_lang'); }catch(e){}
+  if(saved && I18N[saved]){ setLang(saved); return; }
+  const browser = (navigator.language || 'it').slice(0,2).toLowerCase();
+  if(I18N[browser]) setLang(browser);
+})();
+</script>
+
+</body>
+</html>
